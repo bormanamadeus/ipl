@@ -8,13 +8,14 @@
       </button>
     </div>
     <div class="col-sm-12 collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav justify-content-center">
         <li id="main"><a href="{% url 'ph_main' %}">ГЛАВНАЯ</a></li>
         <li id="services"><a href="{% url 'ph_services' %}">УСЛУГИ</a></li>
         <li id="contacts"><a href="{% url 'ph_contacts' %}">КОНТАКТЫ</a></li>
         <li id="info"><a href="{% url 'ph_info' %}">ИНФОРМАЦИЯ</a></li>
       </ul>
     </div>
+
     <!--
     <div class="container">
       <ul class="nav nav-pills" role="tablist">
@@ -27,6 +28,15 @@
     -->
   </div>
 </nav>
+
+<div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
 <script>
   var element = document.getElementById("{{ path }}");
   element.classList.add("active");
