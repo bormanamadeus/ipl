@@ -6,6 +6,7 @@
 <div class="flex-container services">
   {% for service in services %}
     <div>
+      <img src="{{ service.icon.url }}">
       <h3 style="text-align: center">{{ service.title }}</h3>
       <p style="text-align: center">{{ service.content }}</p>
       <p style="text-align: center">{{ service.price }}</p>
@@ -21,6 +22,11 @@
 <style>
 .services p {
   font-size: 15px;
+}
+.services img {
+  margin-top: 10px;
+  height: 40px;
+  width: 40px;
 }
 .flex-container {
   display: flex;
