@@ -7,8 +7,8 @@
   {% for service in services %}
     <div>
       <img src="{{ service.icon.url }}">
-      <h3 style="text-align: center">{{ service.title }}</h3>
-      <p style="text-align: center">{{ service.content }}</p>
+      <!--<h3 style="text-align: center">{{ service.title }}</h3>-->
+      <h4 style="text-align: center">{{ service.content }}</h4>
       <p style="text-align: center">{{ service.price }}</p>
       {% if service.document %}
         <p style="text-align: center">
