@@ -25,6 +25,7 @@ from mainpage.views import get_main_page, get_services, get_contacts, \
 
 
 urlpatterns = [
+    path('', get_main_page),
     path('main/', get_main_page, name='ph_main'),
     path('services/', get_services, name='ph_services'),
     path('contacts/', get_contacts, name='ph_contacts'),
