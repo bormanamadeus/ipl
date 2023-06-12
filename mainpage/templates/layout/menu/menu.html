@@ -1,41 +1,149 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="col-sm-12 collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav justify-content-center">
-        <li id="main"><a href="{% url 'ph_main' %}">ГЛАВНАЯ</a></li>
-        <li id="services"><a href="{% url 'ph_services' %}">УСЛУГИ</a></li>
-        <li id="contacts"><a href="{% url 'ph_contacts' %}">КОНТАКТЫ</a></li>
-        <li id="info"><a href="{% url 'ph_info' %}">ИНФОРМАЦИЯ</a></li>
-      </ul>
-    </div>
+{% load static %}
 
-    <!--
-    <div class="container">
-      <ul class="nav nav-pills" role="tablist">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">HTML</a></li>
-        <li><a href="#">CSS</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </div>
-    -->
+<div style="height: 10px"></div>
+<style>
+  .title {
+    background: linear-gradient(#425085, #0c1e62);
+    height: 250px;
+    border: solid #18296a;
+  }
+  .title .title-center .before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .title .title-center .h1 {
+    text-align: center;
+    weigh: 400px;
+    margin: auto;
+    line-height: 1.4;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: White;
+  }
+  .title. title-center .h1 h1 {
+    display: inline-box;
+  }
+  .title .title-left .img {
+    position: absolute;
+    top: 40px;
+    left: 8%;
+    height: 180px;
+  }
+  .down-line {
+    background: linear-gradient(#425085, #0c1e62);
+  }
+</style>
+
+<div class="title">
+  <div class="title-left">
+    <img class="img" src="{% static 'ipl/img/sign_mchs.webp' %}">
   </div>
-</nav>
 
-<div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <div class="title-center">
+    <span class="before"></span>
+    <div class="h1">
+      <h1>ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ </h1>
+      <h1>«СУДЕБНО-ЭКСПЕРТНОЕ УЧРЕЖДЕНИЕ ФЕДЕРАЛЬНОЙ ПРОТИВОПОЖАРНОЙ СЛУЖБЫ</h1>
+      <h1>«ИСПЫТАТЕЛЬНАЯ ПОЖАРНАЯ ЛАБОРАТОРИЯ»</h1>
+      <h1>ПО АСТРАХАНСКОЙ ОБЛАСТИ</h1>
+      <h1>(ФГБУ СЭУ ФПС ИПЛ по Астраханской области)</h1>
+    </div>
+  </div>
+
+  <div class="title-right">
+
+  </div>
 </div>
+
+<style>
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .menu li {
+    float: left;
+    list-style-type: none;
+  }
+
+  .menu li a {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .menu li p {
+    display: block;
+    color: black;
+    text-align: center;
+    padding-right: auto;
+    padding-left: 300px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu li a:hover {
+    background-color: #238ad4;
+  }
+.menu-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: DodgerBlue;
+}
+</style>
+
+<ul class="menu menu-flex-container">
+  <li><a href="{% url 'ph_main' %}">Главная</a></li>
+  <li><a href="{% url 'ph_services' %}">Наши услуги</a></li>
+  <li><a href="{% url 'ph_contacts' %}">Контакты</a></li>
+  <!--
+  <li><a href="{% url 'ph_main' %} %}">Образцы писем</a></li>
+  <li><a href="{% url 'ph_main' %} %}">Противодействие коррупции</a></li>
+  -->
+  <li><a href="{% url 'ph_politic' %} %}">Политика конфиденциальности</a></li>
+  <li><a href="{% url 'ph_info' %}">Еще</a></li>
+</ul>
+<p class="menu-flex-containter" style="font-size: 10px">ПН–ПТ: 8:30–17:30 (обед 12:30-13:30) СБ-ВС: выходной  E-mail: ipl@mail.30.mchs.gov.ru;  gufpsipl@mail.ru  8(8512)66-91-23</p>
+
+<div class="down-line" style="height: 30px; clear: both"></div>
+
+<!--
+<div class="page">
+  <nav class="page__menu menu">
+    <ul class="menu__list r-list">
+      <li class="menu__group"><a href="{% url 'ph_main' %}" class="menu__link r-link text-underlined">Главная</a></li>
+      <li class="menu__group"><a href="{% url 'ph_services' %}" class="menu__link r-link text-underlined">Наши услуги</a></li>
+      <li class="menu__group"><a href="{% url 'ph_contacts' %}" class="menu__link r-link text-underlined">Контакты</a></li>
+      <li class="menu__group"><a href="{% url 'ph_main' %}" class="menu__link r-link text-underlined">Образцы писем</a></li>
+      <li class="menu__group"><a href="{% url 'ph_main' %}" class="menu__link r-link text-underlined">Противодействие коррупции</a></li>
+      <li class="menu__group"><a href="{% url 'ph_main' %}" class="menu__link r-link text-underlined">Политика конфиденциальности</a></li>
+      <li class="menu__group"><a href="{% url 'ph_info' %}" class="menu__link r-link text-underlined">Еще</a></li>
+    </ul>
+  </nav>
+-->
+
+  <!--
+  <nav class="page__menu page__custom-settings menu">
+    <ul class="menu__list r-list">
+      <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Option #1</a></li>
+      <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Option #2</a></li>
+      <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Option #3</a></li>
+    </ul>
+  </nav>
+  -->
+</div>
+
+<!--<p style="float: right">ПН–ПТ: 8:30–17:30 (обед 12:30-13:30) СБ-ВС: выходной  E-mail: ipl@mail.30.mchs.gov.ru;  gufpsipl@mail.ru  8(8512)66-91-23</p>
+-->
 
 <script>
   var element = document.getElementById("{{ path }}");

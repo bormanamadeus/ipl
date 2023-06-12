@@ -2,102 +2,125 @@
 {% load static %}
 
 {% block content %}
-  <!-- Container (Services Section) -->
-  <span id="letters"></span>
-  <!-- Container (Contact Section) -->
-  <div id="contact" class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12">
-        <h2 class="text-center">Начальник лаборатории</h2>
-        <p class="text-center">майор внутренней службы</p>
-        <p class="text-center">Мысев Евгений Николаевич</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="span4"></div>
-      <div class="span4"><img class="center-block" src="{% static 'ipl/img/boss.webp' %}" style="width: 70%;">
-      </div>
-      <div class="span4"></div>
-    </div>
-  </div>
+<style>
+  .text-center {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+  }
+  .contacts-div-img {
+    margin: auto;
+    width: 500px;
+  }
+  .contacts-div-img-boss {
+    margin: auto;
+    width: 500px;
+  }
+</style>
 
-  <br>
-  <h2 class="text-center">Адрес</h2>
-  <br>
-
-  <div class="container">
-    <div class="row">
-      <div class="address">
-        <div class="p-2">
-          <p><span class="glyphicon glyphicon-map-marker"></span>414056, Астраханская область, г. Астрахань, ул. Савушкина, 41</p>
-        </div>
-        <div class="p-2">
-          <p><span class="glyphicon glyphicon-phone">Тел. 8(8512)66-91-23</span></p>
-        </div>
-        <!--
-        <div class="p-2">
-          <p><span class="glyphicon glyphicon-envelope"></span>E-mail: ipl@mail.30.mchs.gov.ru, gufpsipl@mail.ru</p>
-        </div>
-        <div class="p-2">
-          <p>©2022 ФГБУ СЭУ ФПС ИПЛ по Астраханской области</p>
-        </div>
-        -->
-      </div>
-    </div>
-    <div class="row">
-      <div>
-      <div class="outer" style="">
-        <span class="inner" style="border:1px solid red">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8b2daa212417b4074ea640499d7ee1c3c72bba6a57fb70d8674d2b07d6f7b7ae&amp;width=600&amp;height=400&amp;lang=ru_RU&amp;scroll=true;"></script>
-        </span>
-      </div>
-      </div>
-    </div>
-    <div class="row">
+<span id="letters"></span>
+<div id="" class="container">
+    <div class="">
       <br>
-      <h2 class="text-center">Напишите нам</h2>
+      <h2 class="text-center">Начальник лаборатории</h2>
+      <p class="text-center">майор внутренней службы</p>
+      <p class="text-center">Мысев Евгений Николаевич</p>
       <br>
     </div>
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12">
-        <form action="mailto:rwr79@mail.ru" method="post" enctype="text/plain" >
-          <div class="form-group">
-            <div id="contact" class="container">
+</div>
 
-              <div class="row">
-                <div class="col-sm-6 form-group">
-                  <label for="name">Организация</label>
-                  <input class="form-control" id="name" name="Наименование организации" placeholder="Name" type="text" required>
-                </div>
-                <div class="col-sm-6 form-group">
-                  <label for="email">Почта</label>
-                  <input class="form-control" id="email" name="Адрес эл.почты" placeholder="Email" type="email" required>
-                </div>
-              </div>
+<div class="contacts-div-img">
+  <img class="contacts-div-img-boss" src="{% static 'ipl/img/boss.webp' %}">
+</div>
 
-              <div class="row">
-                <div class="col-sm-12 form-group">
-                  <textarea class="form-control" id="Сообщение" name="comments" placeholder="Comment" rows="5"></textarea>
-                </div>
-              </div>
+<br>
+<h2 class="text-center">Адрес</h2>
+<br>
 
-              <div class="row">
-                <div class="col-sm-12 form-group">
-                  <button type="submit" class="btn btn-default">Отправить</button>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </form>
-
-      </div>
-    </div>
+<div class="address">
+  <div class="p-2">
+    <p><span class="glyphicon glyphicon-map-marker"></span>414056, Астраханская область, г. Астрахань, ул. Савушкина, 41</p>
   </div>
+  <div class="p-2">
+    <p><span class="glyphicon glyphicon-phone">Тел. 8(8512)66-91-23</span></p>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div>
+  <div class="outer" style="">
+    <span class="inner" style="border:1px solid red">
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8b2daa212417b4074ea640499d7ee1c3c72bba6a57fb70d8674d2b07d6f7b7ae&amp;width=600&amp;height=400&amp;lang=ru_RU&amp;scroll=true;"></script>
+    </span>
+  </div>
+  </div>
+</div>
+
+<div class="row">
+  <br>
+  <h2 class="text-center">Напишите нам</h2>
+  <br>
+</div>
+
+<style>
+  .contacts-form {
+    width: 60%;
+    margin: auto;
+  }
+
+  .contacts-form input[type=text], input[type=email]{
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+  }
+
+  .contacts-form label {
+    display: block;
+  }
+
+  .contacts-form textarea {
+    display: block;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+
+  .contacts-form button[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+</style>
+
+<div class="contacts-form">
+<form action="mailto:rwr79@mail.ru" method="post" enctype="text/plain" >
+    <label for="name">Организация</label>
+    <input id="name" name="Наименование организации" placeholder="Наименование организации" type="text" required>
+    <br>
+    <label for="email">Почта</label>
+    <input id="email" name="Адрес эл.почты" placeholder="Эл. почта" type="email" required>
+    <br>
+    <label for="tel">Телефон</label>
+    <input id="tel" name="Телефон" placeholder="Телефон" type="text" required>
+    <br>
+    <textarea id="Сообщение" name="comments" placeholder="Сообщение" rows="5"></textarea>
+    <button type="submit" class="btn btn-default">Отправить</button>
+</form>
+</div>
 
 <style>
 .outer:before {
