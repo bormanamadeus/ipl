@@ -58,12 +58,16 @@
 </div>
 
 <style>
-  .menu ul {
+  .menu {
+    position: relative;
+    top: 120%;
+    height: 35px;
+  }
+  .menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
   }
 
   .menu li {
@@ -73,11 +77,11 @@
 
   .menu li a {
     display: block;
-    color: blue;
+    color: #0c1e62;
     text-align: center;
     padding: 5px 5px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .menu li p {
@@ -97,23 +101,31 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: DodgerBlue;
+}
+.before-menu {
+  position: relative;
+}
+.status {
+  color: white;
+  background: #7faade;
 }
 </style>
 
-<ul class="menu menu-flex-container">
-  <li><a href="{% url 'ph_main' %}">Главная</a></li>
-  <li><a href="{% url 'ph_services' %}">Наши услуги</a></li>
-  <li><a href="{% url 'ph_contacts' %}">Контакты</a></li>
-  <!--
-  <li><a href="{% url 'ph_main' %} %}">Образцы писем</a></li>
-  <li><a href="{% url 'ph_main' %} %}">Противодействие коррупции</a></li>
-  -->
-  <li><a href="{% url 'ph_politic' %}">Политика конфиденциальности</a></li>
-  <li><a href="{% url 'ph_info' %}">Информация</a></li>
-</ul>
+<div class="before-menu">
+  <ul class="menu menu-flex-container">
+    <li><a href="{% url 'ph_main' %}">Главная</a></li>
+    <li><a href="{% url 'ph_services' %}">Наши услуги</a></li>
+    <li><a href="{% url 'ph_contacts' %}">Контакты</a></li>
+    <!--
+    <li><a href="{% url 'ph_main' %} %}">Образцы писем</a></li>
+    <li><a href="{% url 'ph_main' %} %}">Противодействие коррупции</a></li>
+    -->
+    <li><a href="{% url 'ph_politic' %}">Политика конфиденциальности</a></li>
+    <li><a href="{% url 'ph_info' %}">Информация</a></li>
+  </ul>
+</div>
 
-<p class="menu-flex-containter" style="font-size: 10px">ПН–ПТ: 8:30–17:30 (обед 12:30-13:30) СБ-ВС: выходной  E-mail: ipl@mail.30.mchs.gov.ru;  gufpsipl@mail.ru  8(8512)66-91-23</p>
+<p class="menu-flex-containter status" style="font-size: 14px">ПН–ПТ: 8:30–17:30 (обед 12:30-13:30) СБ-ВС: выходной  E-mail: ipl@30.mchs.gov.ru;  gufpsipl@mail.ru  8(8512)66-91-23</p>
 
 <div class="down-line" style="height: 30px; clear: both"></div>
 
