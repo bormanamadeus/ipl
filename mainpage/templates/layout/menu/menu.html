@@ -7,16 +7,19 @@
     height: 250px;
     border: solid #18296a;
   }
-  .title .title-center .before {
+  .before {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
   }
+  .title-center {
+    margin: auto;
+    width: 800px;
+  }
   .title .title-center .h1 {
     text-align: center;
-    weigh: 400px;
     margin: auto;
-    line-height: 1.4;
+    line-height: 1.2;
     font-family: 'Work Sans', sans-serif;
     font-size: 11px;
     font-weight: 700;
@@ -25,15 +28,49 @@
   .title. title-center .h1 h1 {
     display: inline-box;
   }
+  .title .title-center {
+    display: block;
+  }
+  .title .title-left {
+  }
+  .title {
+    position: relative;
+  }
   .title .title-left .img {
     position: absolute;
-    top: 40px;
-    left: 8%;
+    left: 50px;
+    top: 30px;
     height: 180px;
   }
   .down-line {
     background: linear-gradient(#425085, #0c1e62);
   }
+@media screen and (max-width: 1200px) {
+  .title-center {
+    margin: auto;
+    width: 500px;
+  }
+  .title-center h1 {
+    font-size: 1.1rem;
+  }
+  .title .title-left .img {
+    position: absolute;
+    left: 5%;
+    top: 50px;
+    height: 110px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .title-center {
+    margin: auto;
+    width: 400px;
+  }
+  .title-center h1 {
+  }
+  .title .title-left .img {
+    display: none;
+  }
+}
 </style>
 
 <div class="title">
@@ -61,7 +98,6 @@
   .menu {
     position: relative;
     top: 120%;
-    height: 35px;
   }
   .menu {
     list-style-type: none;
@@ -106,8 +142,16 @@
   position: relative;
 }
 .status {
-  color: white;
+  color: black;
   background: #7faade;
+  justify-content: center;
+}
+.rezim {
+  display: inline-block;
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 800px) {
 }
 </style>
 
@@ -115,17 +159,18 @@
   <ul class="menu menu-flex-container">
     <li><a href="{% url 'ph_main' %}">Главная</a></li>
     <li><a href="{% url 'ph_services' %}">Наши услуги</a></li>
-    <li><a href="{% url 'ph_contacts' %}">Контакты</a></li>
     <!--
     <li><a href="{% url 'ph_main' %} %}">Образцы писем</a></li>
     <li><a href="{% url 'ph_main' %} %}">Противодействие коррупции</a></li>
     -->
     <li><a href="{% url 'ph_politic' %}">Политика конфиденциальности</a></li>
     <li><a href="{% url 'ph_info' %}">Информация</a></li>
+    <li><a href="{% url 'ph_contacts' %}">Контакты</a></li>
   </ul>
 </div>
 
-<p class="menu-flex-containter status" style="font-size: 14px">ПН–ПТ: 8:30–17:30 (обед 12:30-13:30) СБ-ВС: выходной  E-mail: ipl@30.mchs.gov.ru;  gufpsipl@mail.ru  8(8512)66-91-23</p>
+<p class="menu-flex-container status" style="font-size: 14px"><span class="rezim">Режим работы: ПН–ПТ: 8:30–17:30</span> <span class="rezim">(обед 12:30-13:30) СБ-ВС: выходной</span></p>
+<p class="menu-flex-container status" style="font-size: 14px">E-mail: ipl@30.mchs.gov.ru;  gufpsipl@mail.ru  8(8512)66-91-23</p>
 
 <div class="down-line" style="height: 30px; clear: both"></div>
 
