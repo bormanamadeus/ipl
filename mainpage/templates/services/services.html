@@ -2,6 +2,31 @@
 {% load static %}
 
 {% block content %}
+<style>
+  .price, .cart {
+    text-align: center;
+    color: white;
+    background-color: DodgerBlue;
+  }
+  .price a:hover {
+    background: #7faade;
+  }
+  .cart a:hover {
+    background: #7faade;
+  }
+  .price {
+  }
+  .cart {
+  }
+</style>
+
+<div class="price">
+  <h1><a href="{% static 'ipl/docs/price2023.pdf' %}">Прайс</a></h1>
+</div>
+
+<div class="cart">
+  <h3><a href="{% static 'ipl/docs/cart_ipl.pdf' %}">Карточка ИПЛ</a></h3>
+</div>
 
 <div class="flex-container services">
   {% for service in services %}
@@ -10,11 +35,13 @@
       <!--<h3 style="text-align: center">{{ service.title }}</h3>-->
       <h4 style="text-align: center">{{ service.content }}</h4>
       <p style="text-align: center">{{ service.price }}</p>
+      <!--
       {% if service.document %}
         <p style="text-align: center">
           <a href="{{service.document.url}}">Скачать образец заявления</a>
         </p>
       {% endif %}
+      -->
     </div>
   {% endfor %}
 </div>

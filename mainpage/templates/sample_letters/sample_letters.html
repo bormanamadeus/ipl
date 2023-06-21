@@ -22,7 +22,12 @@
   font-weight: bold;
 }
 
-.sample_letters h1 {
+.sample_letters .sample-title {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 0px;
+}
+.sample_letters .sample-title h1 {
   text-align: center;
   color: #0c1e62;
 }
@@ -56,21 +61,23 @@
 </style>
 <div class="sample">
 <div class="sample_letters">
-  <h1>Образцы писем на оказываемые услуги.</h1>
-  <h1>Ниже приведены образцы на наиболее востребованные услуги.</h1>
+  <div class="sample-title">
+    <h1>Образцы писем на оказываемые услуги.</h1>
+    <h1>Ниже приведены образцы на наиболее востребованные услуги.</h1>
+  </div>
 
   <ul>
-    <li class="letter-text square">Проверка качества огнезащитной обработки деревянных конструкций</li>
-    <li class="act">(обязательно скачайте и заполните акт изъятия)</li>
-    <li class="letter-text square">Проверка качества огнезащитной обработки текстильных материалов</li>
-    <li class="letter-text square">Проверка качества пенообразователя</li>
-    <li class="act">(обязательно скачайте и заполните акт изъятия)</li>
-    <li class="letter-text square">Проверка качества огнезащитной обработки металлических конструкций</li>
-    <li class="letter-text square">Испытания для отнесения строительных материалов к негорючим или к горючим</li>
-    <li class="letter-text square">Определение группы горючести строительных материалов </li>
-    <li class="letter-text square">Определение группы распространения пламени</li>
-    <li class="letter-text square">Независимая оценка пожарного риска</li>
-    <li class="letter-text square">Расчет категорий помещений по взрывопожарной и пожарной опасности</li>
+    <li class="letter-text square"><a href="{% static 'ipl/docs/Образец огнезащита дерево.doc' %}">Проверка качества огнезащитной обработки деревянных конструкций</a></li>
+    <li class="act"><a href="{% static 'ipl/docs/Акт изъятия отщипов древесины.doc' %}">(обязательно скачайте и заполните акт изъятия)</a></li>
+    <li class="letter-text square"><a href="{% static 'ipl/docs/Образец огнезащита текстиль.doc' %}">Проверка качества огнезащитной обработки текстильных материалов</a></li>
+    <li class="letter-text square"><a href="{% static 'ipl/docs/Образец проверка пенообразователя.doc' %}">Проверка качества пенообразователя</a></li>
+    <li class="act"><a href="{% static 'ipl/docs/Акт изъятия проб пенообразователя.docx' %}">(обязательно скачайте и заполните акт изъятия)</a></li>
+    <li class="letter-text square"><a href="{% static 'ipl/docs/Образец огнезащита металл.doc' %}">Проверка качества огнезащитной обработки металлических конструкций</a></li>
+    <li class="letter-text square"><a href="{% static 'ipl/docs/образец горючесть метод 1.docx' %}">Испытания для отнесения строительных материалов к негорючим или к горючим</a></li>
+    <li class="letter-text square"><a href="{% static 'ipl/docs/образец горючесть метод 2.docx' %}">Определение группы горючести строительных материалов</a></li>
+    <li class="letter-text square"><a href="{% static 'ipl/docs/Образец распространение пламени.doc' %}">Определение группы распространения пламени</a></li>
+    <li class="letter-text square"><a href="{% static 'ipl/docs/Образец письма по расчету риска.docx' %}">Независимая оценка пожарного риска</a></li>
+    <li class="letter-text square"><a href="{% static 'ipl/docs/Образец письма по расчету категории помещений.docx' %}">Расчет категорий помещений по взрывопожарной и пожарной опасности</a></li>
   </ul>
 </div>
 </div>
