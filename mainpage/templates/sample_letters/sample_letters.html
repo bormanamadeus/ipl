@@ -1,0 +1,77 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+.sample {
+  padding: 20px;
+  background: #3f4d83;
+}
+.sample_letters {
+  width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background: yellow;
+}
+
+.sample_letters .act {
+  margin-top: -10px;
+  color: #7faade;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.sample_letters h1 {
+  text-align: center;
+  color: #0c1e62;
+}
+
+.sample_letters ul {
+  line-height: 1.5em;
+  margin: 5px 0 15px;
+  padding: 0;
+}
+
+.sample_letters li {
+  font-family: 'Verdana', 'Helvetica', 'sans-serif';
+  font-size: 20px;
+  text-align: justify;
+  list-style: none;
+  position: relative;
+  margin: 10px;
+  padding: 0 0 0 20px;
+}
+
+.sample_letters li.square::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #f9dd94;
+}
+
+</style>
+<div class="sample">
+<div class="sample_letters">
+  <h1>Образцы писем на оказываемые услуги.</h1>
+  <h1>Ниже приведены образцы на наиболее востребованные услуги.</h1>
+
+  <ul>
+    <li class="letter-text square">Проверка качества огнезащитной обработки деревянных конструкций</li>
+    <li class="act">(обязательно скачайте и заполните акт изъятия)</li>
+    <li class="letter-text square">Проверка качества огнезащитной обработки текстильных материалов</li>
+    <li class="letter-text square">Проверка качества пенообразователя</li>
+    <li class="act">(обязательно скачайте и заполните акт изъятия)</li>
+    <li class="letter-text square">Проверка качества огнезащитной обработки металлических конструкций</li>
+    <li class="letter-text square">Испытания для отнесения строительных материалов к негорючим или к горючим</li>
+    <li class="letter-text square">Определение группы горючести строительных материалов </li>
+    <li class="letter-text square">Определение группы распространения пламени</li>
+    <li class="letter-text square">Независимая оценка пожарного риска</li>
+    <li class="letter-text square">Расчет категорий помещений по взрывопожарной и пожарной опасности</li>
+  </ul>
+</div>
+</div>
+{% endblock %}

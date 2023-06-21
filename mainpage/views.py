@@ -17,6 +17,10 @@ def get_services(request, **kwargs):
     context = create_context(request)
     return render(request, 'services/services.html', context)
 
+def get_sample_letters(request, **kwargs):
+    context = create_context(request)
+    return render(request, 'sample_letters/sample_letters.html', context)
+
 def get_contacts(request, **kwargs):
     context = create_context(request)
     return render(request, 'contacts/contacts.html', context)
