@@ -8,16 +8,27 @@
     color: white;
     background-color: DodgerBlue;
   }
+  .price h1 a {
+    color: #FFFACD;
+    box-shadow: 5px 10px 8px #888888;
+  }
+  .cart h3 a {
+    color: #FFFACD;
+    box-shadow: 5px 10px 8px #888888;
+  }
   .price a:hover {
-    background: #7faade;
+    color: red;
+    box-shadow: 5px 10px 8px red;
   }
   .cart a:hover {
-    background: #7faade;
+    color: red;
+    box-shadow: 5px 10px 8px red;
   }
   .price {
+    flow: left;
+    width: 50%;
   }
   .price .img {
-    display: inline-block;
     height: 50px;
     width: auto;
   }
@@ -25,6 +36,8 @@
     transform: scaleY(1.1) scaleX(1.1) rotate(10deg);
   }
   .cart {
+    flow: left;
+    width: 50%;
   }
   .cart .img {
     height: 50px;
@@ -33,16 +46,31 @@
   .cart a:hover+.img {
     transform: scaleY(1.1) scaleX(1.1) rotate(10deg);
   }
+  .inner-block {
+    margin: auto;
+    width: 40%;
+    display: flex;
+  }
+  .middle {
+    clear: both;
+  }
+  .price-and-cart-block {
+    padding: 20px;
+    background-color: DodgerBlue;
+  }
 </style>
 
-<div class="price">
-  <h1><a href="{% static 'ipl/docs/price2023.pdf' %}">Прайс</a><img class="img" src="{% static 'ipl/img/rub.png' %}"></h1>
+<div class="price-and-cart-block">
+  <div class="inner-block">
+    <div class="price">
+      <h1><a href="{% static 'ipl/docs/price2023.pdf' %}">Прайс</a><img class="img" src="{% static 'ipl/img/rub.png' %}"></h1>
+    </div>
+    <div class="cart">
+      <h3><a href="{% static 'ipl/docs/cart_ipl.pdf' %}">Карточка партнера</a><img class="img" src="{% static 'ipl/img/shake-hands.png' %}"></h3>
+    </div>
+    <div class="middle"></div>
+  </div>
 </div>
-
-<div class="cart">
-  <h3><a href="{% static 'ipl/docs/cart_ipl.pdf' %}">Карточка ИПЛ</a><img class="img" src="{% static 'ipl/img/shake-hands.png' %}"></h3>
-</div>
-
 <div class="flex-container services">
   {% for service in services %}
     <div>
