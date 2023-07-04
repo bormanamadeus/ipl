@@ -16,16 +16,25 @@
   }
   .price {
   }
+  .price .img {
+    display: inline-block;
+    height: 50px;
+    width: auto;
+  }
   .cart {
+  }
+  .cart .img {
+    height: 50px;
+    width: auto;
   }
 </style>
 
 <div class="price">
-  <h1><a href="{% static 'ipl/docs/price2023.pdf' %}">Прайс</a></h1>
+  <h1><a href="{% static 'ipl/docs/price2023.pdf' %}">Прайс</a><img class="img" src="{% static 'ipl/img/rub.png' %}"></h1>
 </div>
 
 <div class="cart">
-  <h3><a href="{% static 'ipl/docs/cart_ipl.pdf' %}">Карточка ИПЛ</a></h3>
+  <h3><a href="{% static 'ipl/docs/cart_ipl.pdf' %}">Карточка ИПЛ</a><img class="img" src="{% static 'ipl/img/shake-hands.png' %}"></h3>
 </div>
 
 <div class="flex-container services">
