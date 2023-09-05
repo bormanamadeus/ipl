@@ -80,6 +80,10 @@
   background-color: DodgerBlue;
 }
 
+.flex-item {
+    width: 45%;
+}
+
 @media screen and (max-width: 1200px) {
     .main-list-bottom {
         width: 90%;
@@ -111,7 +115,7 @@
 
 <div id="flex-container">
     <div class="background-list flex-item">
-        <div class="main-list-common flex-container">
+        <div class="main-list-common">
             <h2>Направлениями деятельности ИПЛ являются:</h2>
             <ul class="list6b ts">
                 <li>установление причин пожаров и условий, способствующих их возникновению</li>
@@ -129,7 +133,7 @@
                 <li>испытание внутреннего противопожарного водопровода на водоотдачу</li>
             </ul>
         </div>
-        <div class="main-list-bottom ts flex-container">
+        <div class="main-list-bottom ts">
             <br>
             <p>В лаборатории могут определить истинную причину пожара. Это нелегко, особенно когда здание выгорает дотла. Но для специалистов ИПЛ нет ничего невозможного. Лаборатория имеет необходимое и современное оборудование,которое позволяет точно найти источник возгорания. </p>
             <br>
@@ -139,7 +143,49 @@
         </div>
     </div>
     <div flex="item">
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <!-- indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mycarousel" data-slide-to="1"></li>
+                <li data-target="#mycarousel" data-slide-to="2"></li>
+                <li data-target="#mycarousel" data-slide-to="3"></li>
+                <li data-target="#mycarousel" data-slide-to="4"></li>
+            </ol>
 
+            <!-- wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img\f1.jpg" alt="los angeles">
+                </div>
+
+                <div class="item">
+                    <img src="img\f2.jpg" alt="venes">
+                </div>
+
+                <div class="item">
+                    <img src="img\f3.png" alt="moscou">
+                </div>
+
+                <div class="item">
+                    <img src="img\f4.jpg" alt="evro">
+                </div>
+
+                <div class="item">
+                    <img src="img\f5.jpg" alt="don">
+                </div>
+            </div>
+
+            <!-- left and right controls -->
+            <a class="left carousel-control" href="#mycarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">previous</span>
+            </a>
+            <a class="right carousel-control" href="#mycarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">next</span>
+            </a>
+        </div>
     </div>
 </div>
 
