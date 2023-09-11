@@ -5,7 +5,7 @@
 
 <style>
 :root {
-    --main-list-color: #0c1e62;
+    --main-list-color: Yellow;
 }
 .list6b {
     padding:0;
@@ -13,9 +13,11 @@
 }
 .list6b li{
     padding:6px;
-    font-size: 20px;
+    margin: 10px;
+    font-size: 18px;
     color: var(--main-list-color);
     line-height: 1;
+    border-left: 4px solid blue;
 }
 .list6b li:before {
     padding-right:10px;
@@ -30,17 +32,19 @@
 }
 .main-list-common {
     display: block;
-    width: 70%;
+    width: 90%;
     margin: auto;
+}
+.flex-main-list-common {
+    display: flex;
+}
+.flex-ts {
+    display: inline-block;
+    flex: 1;
 }
 .main-list-common h2 {
     text-align: center;
     color: #0c1e62;
-}
-.background-list {
-    height: 1000px;
-    background-image: linear-gradient(black, black), url("{% static 'ipl/img/church.png' %}");
-    background-blend-mode: saturation;
 }
 
 .ts {
@@ -106,6 +110,8 @@
 }
 
 /*Carousel*/
+.carousel-container {
+}
 .carousel_items {
   display: flex;
   wrap: nowrap;
@@ -136,18 +142,23 @@
 
 .item1 {
   background-image: url("{% static 'ipl/img/f1.jpg' %}");
+  background-size: 75%;
 }
 .item2 {
   background-image: url("{% static 'ipl/img/f2.jpg' %}");
+  background-size: 75%;
 }
 .item3 {
   background-image: url("{% static 'ipl/img/f3.jpg' %}");
+  background-size: 75%;
 }
 .item4 {
   background-image: url("{% static 'ipl/img/f4.jpg' %}");
+  background-size: 75%;
 }
 .item5 {
   background-image: url("{% static 'ipl/img/f5.jpg' %}");
+  background-size: 75%;
 }
 
 /* flex container for main info */
@@ -162,24 +173,30 @@
   /*background-color: DodgerBlue;*/
 }
 
-.main-flex-item {
-    flex: 1 0;
-    width: 45%;
-    margin: 20px;
+.main-flex-item1 {
+    flex: 4;
+    margin: 10px;
+}
+.main-flex-item2 {
+    flex: 3;
+    margin: 10px;
 }
 </style>
 
 <div id="main-flex-container">
-    <div class="background-list main-flex-item">
+    <div class="main-flex-item1">
         <div class="main-list-common">
             <h2>Направлениями деятельности ИПЛ являются:</h2>
-            <ul class="list6b ts">
+            <div class="flex-main-list-common">
+            <ul class="list6b ts flex-ts">
                 <li>установление причин пожаров и условий, способствующих их возникновению</li>
                 <li>проведение исследований вещественных доказательств, изъятых с мест происшедших пожаров с целью  установления мест возникновения и источника зажигания</li>
                 <li>изучение обстоятельств, способствующих возникновению горения и развитию пожара</li>
                 <li>выдача  заключений о причинах пожаров и проведение пожарно-технических экспертиз</li>
                 <li>определение  показателей пожаровзрывоопасности веществ, материалов, пожарной опасности технологических процессов</li>
                 <li>проверка качества огнезащитной обработки, конструкций и материалов</li>
+            </ul>
+            <ul class="list6b ts flex-ts">
                 <li>независимая оценка пожарного риска</li>
                 <li>испытание систем пожарной сигнализации</li>
                 <li>испытание систем оповещения и управления эвакуацией людей при пожаре</li>
@@ -188,6 +205,7 @@
                 <li>проверка качества пенообразователя</li>
                 <li>испытание внутреннего противопожарного водопровода на водоотдачу</li>
             </ul>
+            </div>
         </div>
         <!--
         <div class="main-list-bottom ts">
@@ -201,23 +219,18 @@
         -->
     </div>
 
-    <div class="main-flex-item">
+    <div class="main-flex-item2">
         <div class="carousel-container">
           <div class="carousel_items">
             <div class="carousel_item item1">
-              <p class="carousel_text"></p>
             </div>
             <div class="carousel_item item2">
-              <p class="carousel_text"></p>
             </div>
             <div class="carousel_item item3">
-              <p class="carousel_text"></p>
             </div>
             <div class="carousel_item item4">
-              <p class="carousel_text"></p>
             </div>
             <div class="carousel_item item5">
-              <p class="carousel_text"></p>
             </div>
           </div>
         </div>

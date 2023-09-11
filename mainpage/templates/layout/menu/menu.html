@@ -2,96 +2,68 @@
 
 <div style="height: 10px"></div>
 <style>
-  .title {
-    background: linear-gradient(#425085, #0c1e62);
-    height: 250px;
-    border: solid #18296a;
-  }
-  .before {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-  }
-  .title-center {
-    margin: auto;
-    width: 800px;
-  }
-  .title .title-center .h1 {
-    text-align: center;
-    margin: auto;
-    line-height: 1.2;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    color: White;
-  }
-  .title. title-center .h1 h1 {
-    display: inline-box;
-  }
-  .title .title-center {
-    display: block;
-  }
-  .title .title-left {
-  }
-  .title {
-    position: relative;
-  }
-  .title .title-left .img {
-    position: absolute;
-    left: 50px;
-    top: 30px;
-    height: 180px;
-  }
-  .down-line {
-    background: linear-gradient(#425085, #0c1e62);
-  }
-@media screen and (max-width: 1200px) {
-  .title-center {
-    margin: auto;
-    width: 500px;
-  }
-  .title-center h1 {
-    font-size: 1.1rem;
-  }
-  .title .title-left .img {
-    position: absolute;
-    left: 5%;
-    top: 50px;
-    height: 110px;
-  }
+.title {
+  display: flex;
+  flex-direction: row;
+  flex-items: center;
+  justify-content: space-around;
+  background: linear-gradient(#425085, #0c1e62);
+  height: 250px;
+  border: solid #18296a;
 }
-@media screen and (max-width: 800px) {
-  .title-center {
-    margin: auto;
-    width: 400px;
-  }
-  .title-center h1 {
-  }
-  .title .title-left .img {
+.title-left, .title-center, .title-right {
+}
+.flex-item {flex: 1;}
+.title-left {flex: 2;}
+.title-center {flex: 5;}
+.title-right {flex: 3;}
+.title img {
+  flow: right;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.title .h1 {
+  text-align: center;
+  margin: auto;
+  line-height: 1.2;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: White;
+}
+@media screen and (max-width: 1200px) {
+  .flex-item, .title-left, .title-right {
     display: none;
   }
+  .title .img {
+    display: none;
+}
+@media screen and (max-width: 800px) {
+  .flex-item, .title-left, .title-right {
+    display: none;
+  }
+  .title .img {
+    display: none;
+  }
+.title-left, .title-right {
+  display: none;
 }
 </style>
 
 <div class="title">
-  <div class="title-left">
-    <img class="img" src="{% static 'ipl/img/sign_mchs.webp' %}">
+  <div class="flex-item"></div>
+  <img class="img title-left" src="{% static 'ipl/img/sign_mchs.webp' %}">
+
+  <div class="h1 title-center">
+    <h1>ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ </h1>
+    <h1>«СУДЕБНО-ЭКСПЕРТНОЕ УЧРЕЖДЕНИЕ ФЕДЕРАЛЬНОЙ ПРОТИВОПОЖАРНОЙ СЛУЖБЫ</h1>
+    <h1>«ИСПЫТАТЕЛЬНАЯ ПОЖАРНАЯ ЛАБОРАТОРИЯ»</h1>
+    <h1>ПО АСТРАХАНСКОЙ ОБЛАСТИ</h1>
+    <h1>(ФГБУ СЭУ ФПС ИПЛ по Астраханской области)</h1>
   </div>
 
-  <div class="title-center">
-    <span class="before"></span>
-    <div class="h1">
-      <h1>ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ </h1>
-      <h1>«СУДЕБНО-ЭКСПЕРТНОЕ УЧРЕЖДЕНИЕ ФЕДЕРАЛЬНОЙ ПРОТИВОПОЖАРНОЙ СЛУЖБЫ</h1>
-      <h1>«ИСПЫТАТЕЛЬНАЯ ПОЖАРНАЯ ЛАБОРАТОРИЯ»</h1>
-      <h1>ПО АСТРАХАНСКОЙ ОБЛАСТИ</h1>
-      <h1>(ФГБУ СЭУ ФПС ИПЛ по Астраханской области)</h1>
-    </div>
-  </div>
-
-  <div class="title-right">
-
-  </div>
+  <div class="title-right"></div>
 </div>
 
 <style>
