@@ -29,10 +29,14 @@ def get_info(request, **kwargs):
     context = create_context(request)
     return render(request, 'info/info.html', context)
 
-
 def get_politic(request, **kwargs):
     context = create_context(request)
     return render(request, 'politic/politic.html', context)
+
+def get_corruption(request, **kwargs):
+    context = create_context(request)
+    return render(request, 'corruption/corruption.html', context)
+
 
 def create_context(request):
     services = Services.objects.all()

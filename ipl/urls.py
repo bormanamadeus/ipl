@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from mainpage.views import get_main_page, get_services, get_sample_letters, get_contacts, \
-    get_info, get_politic
+    get_info, get_politic, get_corruption
 
 
 urlpatterns = [
@@ -32,6 +32,7 @@ urlpatterns = [
     path('contacts/', get_contacts, name='ph_contacts'),
     path('info/', get_info, name='ph_info'),
     path('politic/', get_politic, name='ph_politic'),
+    path('corruption/', get_corruption, name='ph_corruption'),
     path('admin/', admin.site.urls),
 ]
 
