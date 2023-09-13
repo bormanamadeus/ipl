@@ -1,11 +1,11 @@
-{% extends "layout/basic.html" %}
+{% extends "layout/basic_without_footer.html" %}
 {% load static %}
 
 {% block content %}
 
 <style>
 :root {
-    --main-list-color: Yellow;
+    --main-list-color: #0c1e62;
 }
 .list6b {
     padding:0;
@@ -15,11 +15,24 @@
     padding:6px;
     margin: 10px;
     font-size: 18px;
+    font-weight: bolt;
     color: var(--main-list-color);
     line-height: 1;
     border-left: 4px solid blue;
 }
-.list6b li:before {
+.list6b li a:link {
+    color: var(--main-lis-color);
+}
+.list6b li a:visited {
+    color: var(--main-lis-color);
+}
+.list6b li a:hover {
+    color: DodgerBlue;
+}
+.list6b li a:active {
+    color: var(--main-lis-color);
+}
+/*.list6b li:before {
     padding-right:10px;
     font-weight: bold;
     color: #C0C0C0;
@@ -30,6 +43,7 @@
     color: #337AB7;
     content: "\2714";
 }
+*/
 .main-list-common {
     display: block;
     width: 90%;
@@ -42,7 +56,7 @@
     display: inline-block;
     flex: 1;
 }
-.main-list-common h2 {
+.main-h2 {
     text-align: center;
     color: #0c1e62;
 }
@@ -52,7 +66,7 @@
 	font-size: 20px;
 	color: #ff3773;
 	text-shadow:
-		-0   -1px 1px #ff3773,
+		-0   -1px 1px blue,
 		 0   -1px 1px #ff3773,
 		-0    1px 1px #000000,
 		 0    1px 1px #000000,
@@ -93,6 +107,9 @@
         font-size: 18px;
         line-height: 0.8;
     }
+    #main-flex-container {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -107,10 +124,15 @@
         font-size: 12px;
         line-height: 0.8;
     }
+    #main-flex-container {
+        flex-direction: column;
+    }
 }
 
 /*Carousel*/
 .carousel-container {
+    width: 600px;
+    height: 600px;
 }
 .carousel_items {
   display: flex;
@@ -142,53 +164,130 @@
 
 .item1 {
   background-image: url("{% static 'ipl/img/f1.jpg' %}");
-  background-size: 75%;
+  background-size: 100%;
+  object-fit: cover;
 }
 .item2 {
   background-image: url("{% static 'ipl/img/f2.jpg' %}");
-  background-size: 75%;
+  background-size: 100%;
+  object-fit: cover;
 }
 .item3 {
   background-image: url("{% static 'ipl/img/f3.jpg' %}");
-  background-size: 75%;
+  background-size: 100%;
+  object-fit: cover;
 }
 .item4 {
   background-image: url("{% static 'ipl/img/f4.jpg' %}");
-  background-size: 75%;
+  background-size: 100%;
+  object-fit: cover;
 }
 .item5 {
   background-image: url("{% static 'ipl/img/f5.jpg' %}");
-  background-size: 75%;
+  background-size: 100%;
+  object-fit: cover;
 }
 
 /* flex container for main info */
 
 #main-flex-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  flex-direction: row;
-  /*background-color: DodgerBlue;*/
+  height: 500px;
 }
 
 .main-flex-item1 {
-    flex: 4;
-    margin: 10px;
+    flex: 5;
 }
 .main-flex-item2 {
     flex: 3;
-    margin: 10px;
+}
+
+/* Закрываем lightbox */
+.lightbox {
+  display: none;
+}
+
+/* Открываем lightbox */
+.lightbox:target {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Содержимое lightbox  */
+.lightbox figcaption {
+  width: 25rem;
+  position: relative;
+  padding: 1.5em;
+  background-color: lightpink;
+}
+
+/* Кнопка закрытия */
+.lightbox .close {
+  position: relative;
+  display: block;
+}
+
+.lightbox .close::after {
+  right: -1rem;
+  top: -1rem;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  content: "×";
+  cursor: pointer;
+}
+
+/* Обёртка lightbox  */
+.lightbox .close::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  content: "";
+  cursor: default;
 }
 </style>
+
+<div class="lightbox" id="example1">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
+      placerat id eleifend eu, semper vel sem.
+      <img class="img" src="{% static 'ipl/img/rub.png' %}">
+    </figcaption>
+  </figure>
+</div>
+
+
+<h2 class="main-h2">Направлениями деятельности ИПЛ являются:</h2>
+
 
 <div id="main-flex-container">
     <div class="main-flex-item1">
         <div class="main-list-common">
-            <h2>Направлениями деятельности ИПЛ являются:</h2>
             <div class="flex-main-list-common">
-            <ul class="list6b ts flex-ts">
+            <ul class="list6b flex-ts">
                 <li>установление причин пожаров и условий, способствующих их возникновению</li>
                 <li>проведение исследований вещественных доказательств, изъятых с мест происшедших пожаров с целью  установления мест возникновения и источника зажигания</li>
                 <li>изучение обстоятельств, способствующих возникновению горения и развитию пожара</li>
@@ -196,7 +295,7 @@
                 <li>определение  показателей пожаровзрывоопасности веществ, материалов, пожарной опасности технологических процессов</li>
                 <li>проверка качества огнезащитной обработки, конструкций и материалов</li>
             </ul>
-            <ul class="list6b ts flex-ts">
+            <ul class="list6b flex-ts">
                 <li>независимая оценка пожарного риска</li>
                 <li>испытание систем пожарной сигнализации</li>
                 <li>испытание систем оповещения и управления эвакуацией людей при пожаре</li>
@@ -207,16 +306,6 @@
             </ul>
             </div>
         </div>
-        <!--
-        <div class="main-list-bottom ts">
-            <br>
-            <p>В лаборатории могут определить истинную причину пожара. Это нелегко, особенно когда здание выгорает дотла. Но для специалистов ИПЛ нет ничего невозможного. Лаборатория имеет необходимое и современное оборудование,которое позволяет точно найти источник возгорания. </p>
-            <br>
-            <p>На экспериментальной установке по определению огнезащитной обработки древесины сотрудники лаборатории проверяют качество огнезащитных материалов, которыми пропитываются твердые вещества, например, деревянные конструкции кровли зданий.</p>
-            <br>
-            <p>Успешное тушение пожаров зависит от многих составляющих, и фактор качества пенообразователя, который используют для тушения, немаловажен. Сотрудниками лаборатории проводится исследование огнетушащих средств – проверка  качества различных пенообразователей для обеспечения их огнетушащей способности, безопасности для жизни и здоровья  населения и окружающей среды. Они выполняют исследовательские  и научно-практические  работы по направлениям деятельности государственной противопожарной службы.</p>
-        </div>
-        -->
     </div>
 
     <div class="main-flex-item2">
