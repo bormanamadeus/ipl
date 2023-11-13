@@ -1,61 +1,12 @@
 {% load static %}
 
 <div style="height: 10px"></div>
-<style>
-.title {
-  display: flex;
-  flex-direction: row;
-  flex-items: center;
-  justify-content: space-around;
-  background: linear-gradient(#425085, #0c1e62);
-  height: 250px;
-  border: solid #18296a;
-}
-.title-left, .title-center, .title-right {
-}
-.flex-item {flex: 1;}
-.title-left {flex: 2;}
-.title-center {flex: 5;}
-.title-right {flex: 3;}
-.title img {
-  flow: right;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.title .h1 {
-  text-align: center;
-  margin: auto;
-  line-height: 1.2;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  color: White;
-}
-@media screen and (max-width: 1200px) {
-  .flex-item, .title-left, .title-right {
-    display: none;
-  }
-  .title .img {
-    display: none;
-}
-@media screen and (max-width: 800px) {
-  .flex-item, .title-left, .title-right {
-    display: none;
-  }
-  .title .img {
-    display: none;
-  }
-.title-left, .title-right {
-  display: none;
-}
-</style>
 
-<div class="title">
-  <div class="flex-item"></div>
-  <img class="img title-left" src="{% static 'ipl/img/sign_mchs.webp' %}">
+<div class="mainmenu-title">
+  <div class="mainmenu-flex-item"></div>
+  <img class="mainmenu-img mainmenu-title-left" src="{% static 'ipl/img/sign_mchs.webp' %}">
 
-  <div class="h1 title-center">
+  <div class="mainmenu-h1 mainmenu-title-center">
     <h1>ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ </h1>
     <h1>«СУДЕБНО-ЭКСПЕРТНОЕ УЧРЕЖДЕНИЕ ФЕДЕРАЛЬНОЙ ПРОТИВОПОЖАРНОЙ СЛУЖБЫ</h1>
     <h1>«ИСПЫТАТЕЛЬНАЯ ПОЖАРНАЯ ЛАБОРАТОРИЯ»</h1>
@@ -63,72 +14,11 @@
     <h1>(ФГБУ СЭУ ФПС ИПЛ по Астраханской области)</h1>
   </div>
 
-  <div class="title-right"></div>
+  <div class="mainmenu-title-right"></div>
 </div>
 
-<style>
-  .menu {
-    position: relative;
-    top: 120%;
-  }
-  .menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  .menu li {
-    float: left;
-    list-style-type: none;
-  }
-
-  .menu li a {
-    display: block;
-    color: #0c1e62;
-    text-align: center;
-    padding: 5px 5px;
-    text-decoration: none;
-    font-size: 20px;
-  }
-
-  .menu li p {
-    display: block;
-    color: black;
-    text-align: center;
-    padding-right: auto;
-    padding-left: 300px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .menu li a:hover {
-    background-color: #238ad4;
-  }
-.menu-flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.before-menu {
-  position: relative;
-}
-.status {
-  color: black;
-  background: #7faade;
-  justify-content: center;
-}
-.rezim {
-  display: inline-block;
-}
-@media screen and (max-width: 1200px) {
-}
-@media screen and (max-width: 800px) {
-}
-</style>
-
-<div class="before-menu">
-  <ul class="menu menu-flex-container">
+<div class="mainmenu-before">
+  <ul class="mainmenu mainmenu-flex-container">
     <li><a href="{% url 'ph_main' %}">Главная</a></li>
     <li><a href="{% url 'ph_services' %}">Наши услуги</a></li>
     <li><a href="{% url 'ph_sample_letters' %}">Образцы писем</a></li>
@@ -139,39 +29,10 @@
   </ul>
 </div>
 
-<p class="menu-flex-container status" style="font-size: 14px"><span class="rezim">Режим работы: ПН–ПТ: 8:30–17:30</span> <span class="rezim">(обед 12:30-13:30) СБ-ВС: выходной</span></p>
-<p class="menu-flex-container status" style="font-size: 14px">E-mail: ipl@30.mchs.gov.ru;  gufpsipl@mail.ru  8(8512)66-91-23</p>
+<p class="mainmenu-flex-container mainmenu-status" style="font-size: 14px"><span class="mainmenu-rezim">Режим работы: ПН–ПТ: 8:30–17:30</span> <span class="mainmenu-rezim">(обед 12:30-13:30) СБ-ВС: выходной</span></p>
+<p class="mainmenu-flex-container mainmenu-status" style="font-size: 14px">E-mail: ipl@30.mchs.gov.ru;  gufpsipl@mail.ru  8(8512)66-91-23</p>
 
-<div class="down-line" style="height: 30px; clear: both"></div>
-
-<!--
-<div class="page">
-  <nav class="page__menu menu">
-    <ul class="menu__list r-list">
-      <li class="menu__group"><a href="{% url 'ph_main' %}" class="menu__link r-link text-underlined">Главная</a></li>
-      <li class="menu__group"><a href="{% url 'ph_services' %}" class="menu__link r-link text-underlined">Наши услуги</a></li>
-      <li class="menu__group"><a href="{% url 'ph_contacts' %}" class="menu__link r-link text-underlined">Контакты</a></li>
-      <li class="menu__group"><a href="{% url 'ph_main' %}" class="menu__link r-link text-underlined">Образцы писем</a></li>
-      <li class="menu__group"><a href="{% url 'ph_main' %}" class="menu__link r-link text-underlined">Противодействие коррупции</a></li>
-      <li class="menu__group"><a href="{% url 'ph_main' %}" class="menu__link r-link text-underlined">Политика конфиденциальности</a></li>
-      <li class="menu__group"><a href="{% url 'ph_info' %}" class="menu__link r-link text-underlined">Еще</a></li>
-    </ul>
-  </nav>
--->
-
-  <!--
-  <nav class="page__menu page__custom-settings menu">
-    <ul class="menu__list r-list">
-      <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Option #1</a></li>
-      <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Option #2</a></li>
-      <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Option #3</a></li>
-    </ul>
-  </nav>
-  -->
-</div>
-
-<!--<p style="float: right">ПН–ПТ: 8:30–17:30 (обед 12:30-13:30) СБ-ВС: выходной  E-mail: ipl@mail.30.mchs.gov.ru;  gufpsipl@mail.ru  8(8512)66-91-23</p>
--->
+<div class="main-down-line" style="height: 30px; clear: both"></div>
 
 <script>
   var element = document.getElementById("{{ path }}");
