@@ -1,5 +1,11 @@
 {% load static %}
 
+<style>
+  .active {
+    background-color:chocolate;
+  }
+</style>
+
 <div style="height: 10px"></div>
 
 <div class="mainmenu-title">
@@ -19,23 +25,25 @@
 
 <div class="mainmenu-before">
   <ul class="mainmenu mainmenu-flex-container">
-    <li><a href="{% url 'ph_main' %}">Главная</a></li>
-    <li><a href="{% url 'ph_services' %}">Наши услуги</a></li>
-    <li><a href="{% url 'ph_sample_letters' %}">Образцы писем</a></li>
-    <li><a href="{% url 'ph_corruption' %}">Противодействие коррупции</a></li>
-    <li><a href="{% url 'ph_politic' %}">Политика конфиденциальности</a></li>
-    <li><a href="{% url 'ph_info' %}">Информация</a></li>
-    <li><a href="{% url 'ph_contacts' %}">Контакты</a></li>
+    <li id="main"><a href="{% url 'ph_main' %}">Главная</a></li>
+    <li id="services"><a href="{% url 'ph_services' %}">Наши услуги</a></li>
+    <li id="sample_letters"><a href="{% url 'ph_sample_letters' %}">Образцы писем</a></li>
+    <li id="corruption"><a href="{% url 'ph_corruption' %}">Противодействие коррупции</a></li>
+    <li id="politic"><a href="{% url 'ph_politic' %}">Политика конфиденциальности</a></li>
+    <li id="info"><a href="{% url 'ph_info' %}">Информация</a></li>
+    <li id="contacts"><a href="{% url 'ph_contacts' %}">Контакты</a></li>
   </ul>
 </div>
 
 <p class="mainmenu-flex-container mainmenu-status" style="font-size: 14px">
   <span class="mainmenu-rezim"> Режим работы: ПН–ПТ: 8:30–17:30</span>
-  <span class="mainmenu-rezim">(обед 12:30-13:30) СБ-ВС: выходной</span></p>
+  <span class="mainmenu-rezim">(обед 12:30-13:30) СБ-ВС: выходной</span>
+</p>
 <p class="mainmenu-flex-container mainmenu-status" style="font-size: 14px">
   E-mail: ipl@30.mchs.gov.ru;  
   gufpsipl@mail.ru  
-  8(8512)66-91-23</p>
+  8(8512)66-91-23
+</p>
 
 <div class="main-down-line" style="height: 30px; clear: both"></div>
 
