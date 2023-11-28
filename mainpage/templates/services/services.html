@@ -2,63 +2,6 @@
 {% load static %}
 
 {% block content %}
-<style>
-  .price, .cart {
-    text-align: center;
-    color: white;
-    background-color: DodgerBlue;
-  }
-  .price h1 a {
-    color: #FFFACD;
-    box-shadow: 5px 10px 8px #888888;
-  }
-  .cart h3 a {
-    color: #FFFACD;
-    box-shadow: 5px 10px 8px #888888;
-  }
-  .price a:hover {
-    color: red;
-    box-shadow: 5px 10px 8px red;
-  }
-  .cart a:hover {
-    color: red;
-    box-shadow: 5px 10px 8px red;
-  }
-  .price {
-    flow: left;
-    width: 50%;
-  }
-  .price .img {
-    height: 50px;
-    width: auto;
-  }
-  .price a:hover+.img {
-    transform: scaleY(1.1) scaleX(1.1) rotate(10deg);
-  }
-  .cart {
-    flow: left;
-    width: 50%;
-  }
-  .cart .img {
-    height: 50px;
-    width: auto;
-  }
-  .cart a:hover+.img {
-    transform: scaleY(1.1) scaleX(1.1) rotate(10deg);
-  }
-  .inner-block {
-    margin: auto;
-    width: 40%;
-    display: flex;
-  }
-  .middle {
-    clear: both;
-  }
-  .price-and-cart-block {
-    padding: 20px;
-    background-color: DodgerBlue;
-  }
-</style>
 
 <div class="price-and-cart-block">
   <div class="inner-block">
@@ -71,6 +14,7 @@
     <div class="middle"></div>
   </div>
 </div>
+
 <div class="flex-container services">
   {% for service in services %}
     <div>
@@ -89,29 +33,4 @@
   {% endfor %}
 </div>
 
-<style>
-.services p {
-  font-size: 15px;
-}
-.services img {
-  margin-top: 10px;
-  height: 40px;
-  width: 40px;
-}
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: DodgerBlue;
-}
-
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 400px;
-  margin: 10px;
-  text-align: center;
-  line-height: 1;
-  font-size: 30px;
-}
-</style>
 {% endblock %}
