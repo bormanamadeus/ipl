@@ -1,0 +1,54 @@
+.sample {
+    padding: 20px;
+    background: #3f4d83;
+  }
+  .sample_letters {
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background: yellow;
+  }
+  
+  .sample_letters .act {
+    margin-top: -10px;
+    color: #7faade;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .sample_letters .sample-title {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 0px;
+  }
+  .sample_letters .sample-title h1 {
+    text-align: center;
+    color: #0c1e62;
+  }
+  
+  .sample_letters ul {
+    line-height: 1.5em;
+    margin: 5px 0 15px;
+    padding: 0;
+  }
+  
+  .sample_letters li {
+    font-family: 'Verdana', 'Helvetica', 'sans-serif';
+    font-size: 20px;
+    text-align: justify;
+    list-style: none;
+    position: relative;
+    margin: 10px;
+    padding: 0 0 0 20px;
+  }
+  
+  .sample_letters li.square::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #f9dd94;
+  }
+  

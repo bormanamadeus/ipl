@@ -2,7 +2,12 @@ env/
 .git/
 .idea/
 __pycache__
-static/
+static/media
+static/ipl/docs/
+static/ipl/img/
+static/ipl/other/
+static/ipl/static/
+static/ipl/text/
 .*.swp
 db.sqlite3
 

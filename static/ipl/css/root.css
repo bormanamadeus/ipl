@@ -1,0 +1,16 @@
+:root {
+    --main-color: #0c1e62;
+    --background-color: White;
+
+    --header-color: #0c1e62;
+    --text-color: blue;
+    --li-color: DodgerBlue;
+
+    --status-color: black; 
+    --status-background: #7faade; 
+
+    --main-size: 14px;
+    --header-size: var(--main-size) + 16px;
+    --text-size: var(--main-size);
+    --li-size: var(--main-size);
+}

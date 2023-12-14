@@ -1,0 +1,19 @@
+#footer {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#footer p {
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+#footer-relative {
+    position: relative;
+}
+
+footer .glyphicon {
+	font-size: 20px;
+	margin-bottom: 20px;
+}

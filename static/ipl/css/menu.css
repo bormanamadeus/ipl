@@ -1,0 +1,111 @@
+/* Title */
+.mainmenu-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: linear-gradient(#425085, var(--main-color));
+    height: 250px;
+    /* border: solid #18296a; */
+}
+
+.mainmenu-flex-item {flex: 1;}
+.mainmenu-title-left {flex: 2;}
+.mainmenu-title-center {flex: 5;}
+.mainmenu-title-right {flex: 3;}
+
+.mainmenu-title-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.mainmenu-title .mainmenu-h1 {
+    text-align: center;
+    margin: auto;
+    line-height: 1.2;
+    font-family: 'Work Sans', sans-serif;
+    font-size: calc(var(--main-size));
+    font-weight: 700;
+    color: White;
+}
+
+@media screen and (max-width: 1200px) {
+    .mainmenu-flex-item, .mainmenu-title-left, .mainmenu-title-right {
+        display: none;
+    }
+    .mainmenu-title-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .mainmenu-flex-item, .mainmenu-title-left, .mainmenu-title-right {
+        display: none;
+    }
+    .mainmenu-title-img {
+        display: none;
+    }
+    .mainmenu-title-left, .mainmenu-title-right {
+        display: none;
+    }
+}
+
+/* Menu */
+.mainmenu {
+    position: relative;
+    top: 120%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mainmenu li {
+    float: left;
+    list-style-type: none;
+}
+
+.mainmenu li a {
+    display: block;
+    color: var(--main-color);
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: calc(var(--li-size) +  6px);
+}
+
+.mainmenu li p {
+    display: block;
+    color: black;
+    text-align: center;
+    padding-right: auto;
+    padding-left: 300px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mainmenu li a:hover {
+    background-color: #238ad4;
+}
+.mainmenu-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mainmenu-before {
+    position: relative;
+}
+.mainmenu-status {
+    color: black;
+    background: var(--status-background);
+    justify-content: center;
+}
+.mainmenu-rezim {
+    display: inline-block;
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 800px) {
+}
