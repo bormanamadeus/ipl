@@ -1,7 +1,7 @@
 .politic-h3 h3 {
     text-align: center;
     font-width: 900;
-    font-size: 30px;
+    font-size: var(--main-size) + 16px;
     color: #0c1e62;
     padding: 20px;
 }
@@ -14,7 +14,7 @@
 .politic-common-provisions h5 {
     text-align: justify;
     font-width: 900;
-    font-size: 20px;
+    font-size: var(--main-size) + 6px;
     color: #0c1e62;
 }
 
