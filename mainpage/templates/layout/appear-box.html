@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .hidden {
+        display: none;
+    }
+    #box li {
+        color: black;
+        font-size: 24px;
+        display: inline-block;
+        border: 2px solid green;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <a id="button-for-disappear-box"><button>Версия для слабовидящих</button></a>
+    <div id="box" class="hidden">
+        <a id="button-for-appear-box"><button>Стандартная версия сайта</button></a>
+        <ul>
+            <li id="A1" onclick="changeColor('A1')">A</li>
+            <li id="A2" onclick="changeColor('A2')">A</li>
+            <li id="A3" onclick="changeColor('A3')">A</li>
+        </ul>
+
+        <p>Size of site fonts:</p>
+        <p id="text"></p>
+
+        <ul>
+            <li id="S1" onclick="changeFontSize('S1')">S</li>
+            <li id="S2" onclick="changeFontSize('S2')">S</li>
+            <li id="S3" onclick="changeFontSize('S3')">S</li>
+        </ul>
+    </div>
+</body>
+<script>
+    const buttonDisappear = document.querySelector("#button-for-disappear-box");
+    const box = document.querySelector("#box");
+
+    buttonDisappear.addEventListener("click", ()=>{
+        box.classList.toggle("hidden");
+        buttonDisappear.classList.toggle("hidden");
+    })
+
+    const buttonAppear = document.querySelector("#button-for-appear-box");
+
+    buttonAppear.addEventListener("click", ()=>{
+        box.classList.toggle("hidden");
+        buttonDisappear.classList.toggle("hidden");
+    })
+</script>
+
+</body>
+</html>
+
+

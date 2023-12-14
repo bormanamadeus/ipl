@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+:root {
+	--main-color: black;
+    --main-font-size: 14px;
+}
+
+h1, p {
+	color: var(--main-color);
+    }
+
+h1 {
+	font-size: calc(var(--main-font-size) + 20px);
+}
+
+p {
+	font-size: var(--main-font-size);
+}
+    
+li {
+  color: black;
+  font-size: 24px;
+  display: inline-block;
+  border: 2px solid green;
+  text-align: center;
+}
+#A1 {
+	background-color: lightblue;
+}
+s
+#A2 {
+	background-color: yellow;
+}
+
+#A3 {
+	background-color: green;
+}
+#A1, #A2, #A3 {
+	cursor: pointer;
+}
+#A1:active, #A2:active, #A3:active {
+	cursor: cell;
+    background: white;
+}
+
+#S1 {
+	font-size: 14px;
+}
+
+#S2 {
+	font-size: 20px;
+}
+
+#S3 {
+	font-size: 24px;
+}
+#S1, #S2, #S3 {
+	cursor: pointer;
+}
+#S1:active, #S2:active, #S3:active {
+	cursor: cell;
+    background: white;
+}
+
+</style>
+</head>
+<body>
+
+<p>Colors of site:</p>
+<p id="text"></p>
+
+<ul>
+  <li id="A1" onclick="changeColor('A1')">A</li>
+  <li id="A2" onclick="changeColor('A2')">A</li>
+  <li id="A3" onclick="changeColor('A3')">A</li>
+</ul>
+
+<p>Size of site fonts:</p>
+<p id="text"></p>
+
+<ul>
+  <li id="S1" onclick="changeFontSize('S1')">S</li>
+  <li id="S2" onclick="changeFontSize('S2')">S</li>
+  <li id="S3" onclick="changeFontSize('S3')">S</li>
+</ul>
+
+<h1> Hello world </h>
+
+<p>As mentioned, every element has a default display value. However, you can override that</p>
+
+<p>Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is.</p>
+<script>
+	function changeColor(color) {
+    	var r = document.querySelector(':root');
+        if (color === 'A1') {
+            r.style.setProperty('--main-color', 'lightblue')
+        } else if (color === 'A2') {
+        	r.style.setProperty('--main-color', 'yellow')
+        } else if (color === 'A3') {
+        	r.style.setProperty('--main-color', 'green')
+        } else {
+        	r.style.setProperty('--main-color', 'black')
+        }
+    }
+    
+    function changeFontSize(fontsize) {
+    	var r = document.querySelector(':root');
+        if (fontsize === 'S1') {
+            r.style.setProperty('--main-font-size', '14px')
+        } else if (fontsize === 'S2') {
+        	r.style.setProperty('--main-font-size', '20px')
+        } else if (fontsize === 'S3') {
+        	r.style.setProperty('--main-font-size', '24px')
+        } else {
+        	r.style.setProperty('--main-font-size', '14px')
+        }
+    } 
+</script>
+
+</body>
+</html>
+
+
