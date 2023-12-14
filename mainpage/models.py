@@ -1,7 +1,6 @@
 from django.db import models
 
 #TODO Add field
-# 1.   
 class Services(models.Model):
     title = models.CharField(max_length=50, verbose_name='Услуга')
     content = models.TextField(null=True, blank=True, verbose_name='Описание')
