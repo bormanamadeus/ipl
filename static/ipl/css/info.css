@@ -11,8 +11,8 @@
   }
   .info-h3 {
     text-align: center;
-    font-width: 900;
-    font-size: 30px;
+    font-weight: 900;
+    font-size: var(--main-size) + 16px;
     color: #0c1e62;
     padding: 20px;
   }
