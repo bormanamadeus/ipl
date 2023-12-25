@@ -2,30 +2,6 @@
 <html>
 <head>
 <style>
-:root {
-	--main-color: black;
-    --main-font-size: 14px;
-}
-
-h1, p {
-	color: var(--main-color);
-    }
-
-h1 {
-	font-size: calc(var(--main-font-size) + 20px);
-}
-
-p {
-	font-size: var(--main-font-size);
-}
-    
-li {
-  color: black;
-  font-size: 24px;
-  display: inline-block;
-  border: 2px solid green;
-  text-align: center;
-}
 #A1 {
 	background-color: lightblue;
 }
@@ -85,15 +61,16 @@ s
         function changeFontSize(fontsize) {
             var r = document.querySelector(':root');
             if (fontsize === 'S1') {
-                r.style.setProperty('--main-font-size', '14px')
+                r.style.setProperty('--main-size', '14px')
             } else if (fontsize === 'S2') {
-                r.style.setProperty('--main-font-size', '20px')
+                r.style.setProperty('--main-size', '20px')
             } else if (fontsize === 'S3') {
-                r.style.setProperty('--main-font-size', '24px')
+                r.style.setProperty('--main-size', '24px')
             } else {
-                r.style.setProperty('--main-font-size', '14px')
+                r.style.setProperty('--main-size', '14px')
             }
-            saveVarInLocalStorage("--main-font-size", r.style.getPropertyValue('--main-font-size'));
+            console.log('--main-size -> ', r.style.getPropertyValue('--main-size'));
+            saveVarInLocalStorage("--main-size", r.style.getPropertyValue('--main-size'));
         } 
 
         function saveVarInLocalStorage(nameVariable, valueVariable) {
@@ -104,10 +81,10 @@ s
         // window.addEventListener('load', () => {
         document.addEventListener("DOMContentLoaded", () => {  
             var r = document.querySelector(':root');
-            var mainFontSize = localStorage.getItem("--main-font-size");
+            var mainFontSize = localStorage.getItem("--main-size");
             var mainColor = localStorage.getItem("--main-color");
             if (mainFontSize) {
-                r.style.setProperty('--main-font-size', mainFontSize)
+                r.style.setProperty('--main-size', mainFontSize)
             }
             if (mainColor) {
                 r.style.setProperty('--main-color', mainColor)

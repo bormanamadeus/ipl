@@ -1,4 +1,4 @@
-<style>
+{% comment %} <style>
     .hidden {
         display: none;
     }
@@ -41,9 +41,9 @@
         cursor: cell;
         background: white;
     }
-</style>
+</style> {% endcomment %}
 
-<a id="button-for-disappear-box"><button>Версия для слабовидящих</button></a>
+{% comment %} <a id="button-for-disappear-box"><button>Версия для слабовидящих</button></a>
 <div id="box" class="hidden">
     <a id="button-for-appear-box"><button>Стандартная версия сайта</button></a>
     <ul>
@@ -60,4 +60,61 @@
         <li id="S2" onclick="changeFontSize('S2')">S</li>
         <li id="S3" onclick="changeFontSize('S3')">S</li>
     </ul>
+</div> {% endcomment %}
+
+<div class="button-disappear">
+    <a id="button-for-disappear-box"><button>Версия для слабовидящих</button></a>
+</div>
+<div id="prev-box-spec" class="hidden">
+    <div class="button-for-appear-box-center">
+        <a id="button-for-appear-box"><button>Стандартная версия сайта</button></a>
+    </div>
+{% comment %} <div class="box-spec" class="hidden"> {% endcomment %}
+    <div class="box-spec">
+        <div class="box__font">
+            <h4>Размер шрифта</h4>
+            <ul>
+                <span class="before"></span>
+                <li id="S1" onclick="changeFontSize('S1')" class="resize size-one">
+                    <span class="text">A</span>
+                </li>
+                <span class="before"></span>
+                <li id="S2" onclick="changeFontSize('S2')" class="resize size-two">
+                    <span class="text">A</span>
+                </li>
+                <span class="before"></span>
+                <li id="S3" onclick="changeFontSize('S3')" class="resize size-three">
+                    <span class="text">A</span>
+                </li>
+                <span class="before"></span>
+                <li id="S4" onclick="changeFontSize('S4')" class="resize size-four">
+                    <span class="text">A</span>
+                </li>
+                <span class="before"></span>
+                <li id="S5" onclick="changeFontSize('S5')" class="resize size-five">
+                    <span class="text">A</span>
+                </li>
+            </ul>
+        </div>
+        <div class="box__color">
+            <h4>Цвета сайта</h4>
+            <ul>
+                <li id="A1" onclick="changeColor('A1')" class="recolor color-white">
+                    <span class="text">Ц</span>
+                </li>
+                <li id="A2" onclick="changeColor('A2')" class="recolor color-black">
+                    <span class="text">Ц</span>
+                </li>
+                <li id="A3" onclick="changeColor('A3')" class="recolor color-blue">
+                    <span class="text">Ц</span>
+                </li>
+                <li id="A4" onclick="changeColor('A4')" class="recolor color-yellow">
+                    <span class="text">Ц</span>
+                </li>
+                <li id="A5" onclick="changeColor('A5')" class="recolor color-brown">
+                    <span class="text">Ц</span>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>

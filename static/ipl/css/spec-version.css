@@ -1,3 +1,6 @@
+.hidden {
+  display: none;
+}
 /*  Templates */
 .box__color, .box__font {
   position: relative;
@@ -9,7 +12,7 @@
 
 .box__color ul, .box__font ul {
   position: relative;
-  left: -20px;
+  left: 20px;
   display: flex;
 }
 
@@ -44,7 +47,7 @@ span.text {
 }
 
 /*  General classes */
-.box {
+.box-spec {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,6 +56,18 @@ span.text {
   margin: auto;
   border: 1px solid brown;
   background-color: #f8f8f8;
+}
+
+.button-disappear {
+  text-align: center;
+}
+
+.button-for-appear-box-center {
+  text-align: center;
+}
+
+.prev-box-spec {
+  text-align: center;
 }
 
 .size-one {
