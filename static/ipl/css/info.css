@@ -1,8 +1,8 @@
 .info-div {
     width: 80%;
     margin: auto;
-    background: yellow;
-    border: 2px solid #0c1e62;
+    background: var(--text-background-color);
+    border: 2px solid var(--main-color);
   }
   .info-div img {
     float: left;
@@ -13,7 +13,7 @@
     text-align: center;
     font-weight: 900;
     font-size: var(--main-size) + 16px;
-    color: #0c1e62;
+    color: var(--main-color);
     padding: 20px;
   }
   .info-div-text p {

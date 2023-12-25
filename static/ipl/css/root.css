@@ -1,16 +1,19 @@
 :root {
-    --main-color: #0c1e62;
+    --main-color-def: #0c1e62;
+    --main-color: var(--main-color-def);
     --background-color: White;
 
     --header-color: #0c1e62;
     --text-color: blue;
     --li-color: DodgerBlue;
+    --text-background-color: #7faade;
 
     --status-color: black; 
     --status-background: #7faade; 
 
-    --main-size: 14px;
-    --header-size: var(--main-size) + 16px;
+    --main-size-def: 14px;
+    --main-size: var(--main-size-def);
+    --header-size: calc(var(--main-size) + 16px);
     --text-size: var(--main-size);
     --li-size: var(--main-size);
 }

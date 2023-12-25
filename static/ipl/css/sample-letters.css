@@ -6,12 +6,12 @@
     width: 1000px;
     margin: auto;
     padding: 20px;
-    background: yellow;
+    background: var(--text-background-color);
   }
   
   .sample_letters .act {
     margin-top: -10px;
-    color: #7faade;
+    color: var(--text-background-color);
     font-size: 15px;
     font-weight: bold;
   }
@@ -23,7 +23,7 @@
   }
   .sample_letters .sample-title h1 {
     text-align: center;
-    color: #0c1e62;
+    color: var(--header-color);
   }
   
   .sample_letters ul {

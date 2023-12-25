@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#A1 {
+	background-color: lightblue;
+}
+s
+#A2 {
+	background-color: yellow;
+}
+
+#A3 {
+	background-color: green;
+}
+#A1, #A2, #A3 {
+	cursor: pointer;
+}
+#A1:active, #A2:active, #A3:active {
+	cursor: cell;
+    background: white;
+}
+
+#S1 {
+	font-size: 14px;
+}
+
+#S2 {
+	font-size: 20px;
+}
+
+#S3 {
+	font-size: 24px;
+}
+#S1, #S2, #S3 {
+	cursor: pointer;
+}
+#S1:active, #S2:active, #S3:active {
+	cursor: cell;
+    background: white;
+}
+
+</style>
+</head>
+<body>
+    <script>
+        function changeColor(color) {
+            var r = document.querySelector(':root');
+            if (color === 'A1') {
+                r.style.setProperty('--main-color', 'lightblue')
+            } else if (color === 'A2') {
+                r.style.setProperty('--main-color', 'yellow')
+            } else if (color === 'A3') {
+                r.style.setProperty('--main-color', 'green')
+            } else {
+                r.style.setProperty('--main-color', 'black')
+            }
+            saveVarInLocalStorage("--main-color", r.style.getPropertyValue('--main-color'));
+        }
+        
+        function changeFontSize(fontsize) {
+            var r = document.querySelector(':root');
+            if (fontsize === 'S1') {
+                r.style.setProperty('--main-size', '14px')
+            } else if (fontsize === 'S2') {
+                r.style.setProperty('--main-size', '20px')
+            } else if (fontsize === 'S3') {
+                r.style.setProperty('--main-size', '24px')
+            } else {
+                r.style.setProperty('--main-size', '14px')
+            }
+            console.log('--main-size -> ', r.style.getPropertyValue('--main-size'));
+            saveVarInLocalStorage("--main-size", r.style.getPropertyValue('--main-size'));
+        } 
+
+        function saveVarInLocalStorage(nameVariable, valueVariable) {
+            console.log(nameVariable, valueVariable);
+            localStorage.setItem(nameVariable, valueVariable);
+        }
+
+        // window.addEventListener('load', () => {
+        document.addEventListener("DOMContentLoaded", () => {  
+            var r = document.querySelector(':root');
+            var mainFontSize = localStorage.getItem("--main-size");
+            var mainColor = localStorage.getItem("--main-color");
+            if (mainFontSize) {
+                r.style.setProperty('--main-size', mainFontSize)
+            }
+            if (mainColor) {
+                r.style.setProperty('--main-color', mainColor)
+            }
+        });
+    </script>
+
+    <a href="other-page.html">Link to other page</a>
+    <p>Colors of site:</p>
+    <p id="text"></p>
+
+    <ul>
+    <li id="A1" onclick="changeColor('A1')">A</li>
+    <li id="A2" onclick="changeColor('A2')">A</li>
+    <li id="A3" onclick="changeColor('A3')">A</li>
+    </ul>
+
+    <p>Size of site fonts:</p>
+    <p id="text"></p>
+
+    <ul>
+    <li id="S1" onclick="changeFontSize('S1')">S</li>
+    <li id="S2" onclick="changeFontSize('S2')">S</li>
+    <li id="S3" onclick="changeFontSize('S3')">S</li>
+    </ul>
+
+    <h1> Hello world </h>
+
+    <p>As mentioned, every element has a default display value. However, you can override that</p>
+
+    <p>Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is.</p>
+</body>
+</html>
+
+

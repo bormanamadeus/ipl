@@ -1,0 +1,63 @@
+<style>
+    .hidden {
+        display: none;
+    }
+    #box li {
+        color: black;
+        font-size: 24px;
+        display: inline-block;
+        border: 2px solid green;
+        text-align: center;
+    }
+    #A1 {
+        background-color: lightblue;
+    }
+    #A2 {
+        background-color: yellow;
+    }
+    #A3 {
+        background-color: green;
+    }
+    #A1, #A2, #A3 {
+        cursor: pointer;
+    }
+    #A1:active, #A2:active, #A3:active {
+        cursor: cell;
+        background: white;
+    }
+    #S1 {
+        font-size: 14px;
+    }
+    #S2 {
+        font-size: 20px;
+    }
+    #S3 {
+        font-size: 24px;
+    }
+    #S1, #S2, #S3 {
+        cursor: pointer;
+    }
+    #S1:active, #S2:active, #S3:active {
+        cursor: cell;
+        background: white;
+    }
+</style>
+
+<a id="button-for-disappear-box"><button>Версия для слабовидящих</button></a>
+<div id="box" class="hidden">
+    <a id="button-for-appear-box"><button>Стандартная версия сайта</button></a>
+    <ul>
+        <li id="A1" onclick="changeColor('A1')">A</li>
+        <li id="A2" onclick="changeColor('A2')">A</li>
+        <li id="A3" onclick="changeColor('A3')">A</li>
+    </ul>
+
+    <p>Size of site fonts:</p>
+    <p id="text"></p>
+
+    <ul>
+        <li id="S1" onclick="changeFontSize('S1')">S</li>
+        <li id="S2" onclick="changeFontSize('S2')">S</li>
+        <li id="S3" onclick="changeFontSize('S3')">S</li>
+    </ul>
+</div>

@@ -1,0 +1,102 @@
+/*  Templates */
+.box__color, .box__font {
+  position: relative;
+  width: 50%;
+  text-align: center;
+  height: 80px;
+  line-height: 0px;
+}
+
+.box__color ul, .box__font ul {
+  position: relative;
+  left: -20px;
+  display: flex;
+}
+
+.box__color h4, .box__font h4 {
+  text-align: center;
+}
+
+.before {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.recolor, .resize {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+  cursor: pointer;
+  list-style-type: none;
+}
+.recolor:hover, .resize:hover {
+  background-color: #9dd1ff;
+}
+
+span.text {
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  right: 1px;
+}
+
+/*  General classes */
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 400px;
+  margin: auto;
+  border: 1px solid brown;
+  background-color: #f8f8f8;
+}
+
+.size-one {
+  font-size: 10px;
+}
+
+.size-two {
+  font-size: 14px;
+}
+
+.size-three {
+  font-size: 18px;
+}
+
+.size-four {
+  font-size: 22px;
+}
+
+.size-five {
+  font-size: 26px;
+}
+
+.color-white {
+  font-size: 10px;
+  background: white;
+}
+
+.color-black {
+  font-size: 14px;
+  background: black;
+  color: white;
+}
+
+.color-blue {
+  font-size: 18px;
+  background: blue;
+}
+
+.color-yellow {
+  font-size: 22px;
+  background: yellow;
+}
+
+.color-brown {
+  font-size: 26px;
+  background: brown;
+}
