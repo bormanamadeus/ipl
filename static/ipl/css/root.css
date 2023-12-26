@@ -1,12 +1,18 @@
 :root {
     --main-color-def: #0c1e62;
     --main-color: var(--main-color-def);
+    --background-color-def: White;
     --background-color: White;
+    --text-color-def: blue;
+    --text-color: blue;
+    --extra-back-color-def: DodgerBlue;
+    --extra-back-color: DodgerBlue;
+
+    --text-background-color-def: #7faade;
+    --text-background-color: #7faade;
 
     --header-color: #0c1e62;
-    --text-color: blue;
     --li-color: DodgerBlue;
-    --text-background-color: #7faade;
 
     --status-color: black; 
     --status-background: #7faade; 

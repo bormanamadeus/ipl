@@ -7,21 +7,21 @@
     margin: 10px;
     font-size: var(--main-size) + 4px;
     font-weight: bolt;
-    color: var(--main-color);
+    color: var(--text-color);
     line-height: 1;
     border-left: 4px solid blue;
 }
 .list6b li a:link {
-    color: var(--main-color);
+    color: var(--text-color);
 }
 .list6b li a:visited {
-    color: var(--main-color);
+    color: var(--text-color);
 }
 .list6b li a:hover {
     color: DodgerBlue;
 }
 .list6b li a:active {
-    color: var(--main-color);
+    color: var(--text-color);
 }
 /*.list6b li:before {
     padding-right:10px;
@@ -49,7 +49,7 @@
 }
 .main-h2 {
     text-align: center;
-    color: #0c1e62;
+    color: var(--text-color);
 }
 
 .ts {
@@ -79,7 +79,7 @@
     padding-top: 20px;
     width: 70%;
     margin: auto;
-    color: var(--main-list-color);
+    color: var(--text-color);
 }
 .main-list-bottom p{
     font-size: var(--main-size) + 6px;
