@@ -1,18 +1,18 @@
 .sample {
     padding: 20px;
-    background: #3f4d83;
+    background: var(--main-color);
   }
   .sample_letters {
     width: 1000px;
     margin: auto;
     padding: 20px;
-    background: var(--text-background-color);
+    background: var(--main-color);
   }
   
   .sample_letters .act {
     margin-top: -10px;
-    color: var(--text-background-color);
-    font-size: 15px;
+    color: var(--text-color);
+    font-size: calc(var(--main-size) + 1px);
     font-weight: bold;
   }
   
@@ -23,7 +23,7 @@
   }
   .sample_letters .sample-title h1 {
     text-align: center;
-    color: var(--header-color);
+    color: var(--text-color);
   }
   
   .sample_letters ul {
@@ -34,7 +34,7 @@
   
   .sample_letters li {
     font-family: 'Verdana', 'Helvetica', 'sans-serif';
-    font-size: 20px;
+    font-size: calc(var(--main-size) + 6px);
     text-align: justify;
     list-style: none;
     position: relative;
@@ -49,6 +49,6 @@
     top: 5px;
     width: 10px;
     height: 10px;
-    background-color: #f9dd94;
+    background-color: var(--extra-back-color);
   }
   

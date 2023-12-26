@@ -2,12 +2,10 @@
     --main-color-def: #0c1e62;
     --main-color: var(--main-color-def);
     --background-color-def: White;
-    --background-color: White;
-    --text-color-def: blue;
-    --text-color: blue;
-    /* --extra-back-color-def: DodgerBlue; */
-    /* --extra-back-color: DodgerBlue; */
-    --extra-back-color-def: White;
+    --background-color: var(--background-color-def);
+    --text-color-def: black;
+    --text-color: var(--text-color-def);
+    --extra-back-color-def: #7faade;
     --extra-back-color: var(--extra-back-color-def);
 
     --text-background-color-def: #7faade;
@@ -27,25 +25,5 @@
 }
 
 body {
-    background: var(--extra-back-color);
-}
-
-    --text-background-color-def: #7faade;
-    --text-background-color: #7faade;
-
-    --header-color: #0c1e62;
-    --li-color: DodgerBlue;
-
-    --status-color: black; 
-    --status-background: #7faade; 
-
-    --main-size-def: 14px;
-    --main-size: var(--main-size-def);
-    --header-size: calc(var(--main-size) + 16px);
-    --text-size: var(--main-size);
-    --li-size: var(--main-size);
-}
-
-body {
-    background: var(--extra-back-color);
+    background: var(--background-color);
 }

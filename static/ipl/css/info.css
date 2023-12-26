@@ -12,7 +12,7 @@
   .info-h3 {
     text-align: center;
     font-weight: 900;
-    font-size: var(--main-size) + 16px;
+    font-size: calc(var(--main-size) + 16px);
     color: var(--main-color);
     padding: 20px;
   }

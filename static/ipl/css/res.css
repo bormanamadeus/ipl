@@ -11,11 +11,11 @@ svg {
 	width: 50px;
 	height: 50px;
 	fill: blue;
-	color: blue;
+    color: var(--text-color);
 }
 /*
 h2 {
-	font-size: 24px;
+    font-size: var(--main-size) + 10px;
 	text-transform: uppercase;
 	color: #303030;
 	font-weight: 600;
@@ -23,9 +23,9 @@ h2 {
 }
 */
 h4 {
-	font-size: 19px;
+    /* font-size: calc(var(--main-size) + 5px); */
 	line-height: 1.375em;
-	color: #303030;
+    color: var(--text-color);
 	font-weight: 400;
 	margin-bottom: 30px;
 }
@@ -41,7 +41,7 @@ h4 {
 	margin-right: auto;
 }
 .img-ipl {
-	color: blue;
+    color: var(--text-color);
 	block-size: 100px;
 }
 .img-rounded {
@@ -54,7 +54,7 @@ h4 {
     color: yellow;
 }
 .jumbotron {
-	background-color: #2358a8;
+	background-color: var(--main-color);
 	color: #fff;
 	padding: 100px 25px;
 	font-family: Montserrat, sans-serif;
@@ -67,11 +67,11 @@ h4 {
 }
 .logo-small {
 	color: #f4511e;
-	font-size: 50px;
+    font-size: var(--main-size) + 36px;
 }
 .logo {
 	color: #f4511e;
-	font-size: 200px;
+    font-size: var(--main-size) + 186px;
 }
 .thumbnail {
 	padding: 0 0 15px 0;
@@ -94,7 +94,7 @@ h4 {
 	background-color: #f4511e;
 }
 .item h4 {
-	font-size: 19px;
+    font-size: var(--main-size) + 5px;
 	line-height: 1.375em;
 	font-weight: 400;
 	font-style: italic;
@@ -126,11 +126,11 @@ h4 {
 	background-color: white !important;
 }
 .panel-footer h3 {
-	font-size: 32px;
+    font-size: var(--main-size) + 18px;
 }
 .panel-footer h4 {
 	color: #aaa;
-	font-size: 14px;
+    font-size: var(--main-size) + 0px;
 }
 .panel-footer .btn {
 	margin: 15px 0;
@@ -190,6 +190,6 @@ h4 {
 }
 @media screen and (max-width: 480px) {
 .logo {
-	font-size: 150px;
+    font-size: var(--main-size) + 136px;
 }
 }

@@ -37,15 +37,15 @@
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: var(--main-size) + 2px;
+    background-color: var(--main-color);
+    font-size: calc(var(--main-size) + 2px);
     resize: none;
   }
 
   .contacts-form button[type=submit] {
-    background-color: #4CAF50;
+    background-color: var(--main-color);
     border: none;
-    color: white;
+    color: var(--text-color);
     padding: 16px 32px;
     text-decoration: none;
     margin: 4px 2px;
@@ -80,7 +80,7 @@
     margin-right: auto;
   }
   #contact p {
-    font-size: var(--main-size) + 6px;
+    font-size: calc(var(--main-size) + 6px);
   }
   .address p {
     text-align: center;

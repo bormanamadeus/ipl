@@ -1,6 +1,7 @@
 #footer {
     text-align: center;
-    font-size: var(--main-size) + 4px;
+    font-size: calc(var(--main-size) + 4px);
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
@@ -14,6 +15,6 @@
 }
 
 footer .glyphicon {
-    font-size: var(--main-size) + 6px;
+    font-size: calc(var(--main-size) + 6px);
 	margin-bottom: 20px;
 }
