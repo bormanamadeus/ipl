@@ -1,4 +1,45 @@
 #footer {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    justify-content: center;
+
+    height: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mchs-ast, .mchs-rf {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 300px;
+    border: 1px solid gray;
+    /* margin: 10px; */
+}
+
+.mchs-ast text {
+}
+
+.mchs-ast b:hover, .mchs-rf b:hover {
+    color: var(--main-color);
+}
+.mchs-ast p, .mchs-rf p {
+    font-size: calc(var(--text-color) - 8px);
+    color: gray;
+}
+
+
+/* #footer {
     text-align: center;
     font-size: calc(var(--main-size) + 4px);
     color: var(--text-color);
@@ -17,4 +58,4 @@
 footer .glyphicon {
     font-size: calc(var(--main-size) + 6px);
 	margin-bottom: 20px;
-}
+} */

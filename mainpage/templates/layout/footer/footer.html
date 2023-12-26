@@ -1,10 +1,37 @@
+{% load static %}
+
+<div style="height: 30px"></div>
+
 <div id="footer-relative">
     <div id="footer">
-        <br>
+        <div class=footer-img>
+            {% comment %} <img src="{% static 'ipl/img/mchs-ast.svg' %}"> {% endcomment %}
+        </div>
+        <div class="mchs-ast">
+            <div class="text">
+                <b>8 (8512) 44-12-06</b>
+                <p>Главное управление МЧС России по Астраханской области</p>
+            </div>
+        </div>
+        <div class="mchs-rf">
+            <div class="text">
+                <b>01 или 101</b>
+                <p>Единый телефон пожарных и спасателей</p>
+            </div>
+        </div>
+
+        {% comment %} 01 или 101
+        Единый телефон пожарных и спасателей
+        8 (8512) 44-12-06
+        Главное управление МЧС России по Астраханской области
+        8 (8512) 39-99-99
+        Единый «телефон доверия» {% endcomment %}
+
+        {% comment %} <br>
         <p><small>ПН–ПТ: 8:30–17:30 (обед 12:30-13:30) СБ-ВС: выходной</small></p>
         <p>E-mail: ipl@30.mchs.gov.ru;  gufpsipl@mail.ru  8(8512)66-91-23</p>
         <br>
         <p>414056, Астраханская область, г. Астрахань, ул. Савушкина, 41</>
-        <p>©2022 ФГБУ СЭУ ФПС ИПЛ по Астраханской области</p>
+        <p>©2022 ФГБУ СЭУ ФПС ИПЛ по Астраханской области</p> {% endcomment %}
     </div>
 </div>
