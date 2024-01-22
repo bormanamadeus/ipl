@@ -5,7 +5,7 @@
 .list6b li{
     padding:6px;
     margin: 10px;
-    font-size: calc(var(--main-size) + 4px);
+    font-size: calc(var(--main-size) + 7px);
     font-weight: bolt;
     color: var(--text-color);
     line-height: 1;
@@ -91,7 +91,7 @@
         width: 90%;
     }
     .list6b li{
-        font-size: calc(var(--main-size) + 6px);
+        font-size: calc(var(--main-size) + 4px);
         line-height: 0.8;
     }
     .main-list-bottom p{

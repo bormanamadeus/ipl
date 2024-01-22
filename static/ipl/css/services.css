@@ -1,14 +1,14 @@
 .price, .cart {
     text-align: center;
-    color: var(--text-color);
-    background-color: var(--main-color);
+    color: var(--main-color);
+    background-color: var(--extra-back-color);
   }
   .price h1 a {
-    color: #FFFACD;
+    /* color: #FFFACD; */
     box-shadow: 5px 10px 8px #888888;
   }
   .cart h3 a {
-    color: #FFFACD;
+    /* color: #FFFACD; */
     box-shadow: 5px 10px 8px #888888;
   }
   .price a:hover {
@@ -51,7 +51,7 @@
   }
   .price-and-cart-block {
     padding: 20px;
-    background-color: var(--main-color);
+    background-color: var(--extra-back-color);
   }
 
   .services p {
@@ -75,5 +75,5 @@
     margin: 10px;
     text-align: center;
     line-height: 1;
-    font-size: calc(var(--main-size) + 16px);
+    font-size: calc(var(--main-size) + 8px);
   }

@@ -1,3 +1,7 @@
+#footer-relative {
+    position: relative;
+}
+
 #footer {
     display: flex;
     flex-direction: row;

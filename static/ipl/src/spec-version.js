@@ -38,6 +38,11 @@ window.addEventListener("load", () => {
 });
 
 function changeColor(color) {
+    function setColor(settings, root_selector) {
+        for (let param_name in settings) {
+            root_selector.style.setProperty(param_name, settings[param_name]);
+        }
+    }
     var r = document.querySelector(':root');
     if (color === 'A1') {
         //r.style.setProperty('--main-color', 'lightblue')
