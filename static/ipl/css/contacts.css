@@ -2,6 +2,7 @@
     text-align: center;
     margin: 0px;
     padding: 0px;
+    font-size: calc(var(--main-size) + 6px);
   }
   .contacts-div-img {
     margin: auto;
@@ -24,10 +25,12 @@
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid red;
+    font-size: calc(var(--main-size) + 6px);
   }
 
   .contacts-form label {
     display: block;
+    font-size: calc(var(--main-size) + 6px);
   }
 
   .contacts-form textarea {
@@ -38,7 +41,7 @@
     border: 2px solid #ccc;
     border-radius: 4px;
     /* background-color: var(--main-color); */
-    font-size: calc(var(--main-size) + 2px);
+    font-size: calc(var(--main-size) + 6px);
     resize: none;
   }
 
@@ -50,6 +53,7 @@
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+    font-size: calc(var(--main-size) + 6px);
   }
 
   .outer:before {
@@ -84,4 +88,5 @@
   }
   .address p {
     text-align: center;
+    font-size: calc(var(--main-size) + 6px);
   }
