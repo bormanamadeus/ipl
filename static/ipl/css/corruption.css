@@ -38,7 +38,7 @@
     /* color: black; */
 }
   .corruption-text p a:hover {
-    color: var(--extra-back-color);
+    color: var(--color-hover);
 }
   .corruption-text p a:active {
     color: var(--text-color);
