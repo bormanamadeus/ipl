@@ -38,8 +38,9 @@
     font-size: calc(var(--main-size) + 6px);
     text-align: justify;
     list-style: none;
-    position: relative;
-    margin: 10px;
+    line-height: 1.5em;
+    /* position: relative; */
+    margin: 3px;
     padding: 0 0 0 20px;
   }
   
@@ -52,4 +53,3 @@
     height: 10px;
     background-color: var(--extra-back-color);
   }
-  
