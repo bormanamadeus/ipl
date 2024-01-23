@@ -50,6 +50,7 @@
 .main-h2 {
     text-align: center;
     color: var(--text-color);
+    font-size: calc(var(--main-size) + 10px);
 }
 
 .ts {

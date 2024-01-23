@@ -112,6 +112,7 @@
     color: var(--extra-back-color);
     background: var(--main-color);
     justify-content: center;
+    font-size: var(--main-size);
 }
 .mainmenu-rezim {
     display: inline-block;
