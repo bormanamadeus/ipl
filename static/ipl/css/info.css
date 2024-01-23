@@ -23,3 +23,35 @@
     margin: 20px;
     padding: 5px;
   }
+
+  .history {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    border: 2px solid var(--main-color);
+    padding: 15px;
+  }
+
+  .history_block {
+    /* flex: auto; */
+    /* flex-basis: 500px; */
+    margin: 20px;
+    width: auto;
+  }
+
+  .history_block img:hover {
+    transform: scale(2);
+    border: 2px solid var(--main-color);
+    z-index: 100;
+  }
+
+  .history_block p {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+  }
