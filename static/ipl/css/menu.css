@@ -95,7 +95,10 @@
 }
 
 .mainmenu li a:hover {
-    background-color: var(--main-color);
+    /* background-color: var(--extra-back-color); */
+    background-color: lightblue;
+    /* outline: 3px solid yellow;  */
+    /* font-weight: 700; */
 }
 .mainmenu-flex-container {
     display: flex;
