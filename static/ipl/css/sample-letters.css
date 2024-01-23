@@ -5,7 +5,8 @@
   .sample_letters {
     width: 1000px;
     margin: auto;
-    padding: 20px;
+    padding: 5px;
+    border: 3px solid black;
     /* background: var(--main-color); */
   }
   
