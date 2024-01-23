@@ -10,13 +10,11 @@
   margin: auto;
   background: var(--main-color);
   border: 2px solid var(---extra-back-color);
+  padding: 40px;
 }
 .politic-common-provisions h5 {
     text-align: justify;
     font-weight: 900;
     font-size: calc(var(--main-size) + 6px);
     color: var(--text-color);
-}
-
-.politic-common-provisions p {
 }
