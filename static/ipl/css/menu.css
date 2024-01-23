@@ -96,7 +96,7 @@
 
 .mainmenu li a:hover {
     /* background-color: var(--extra-back-color); */
-    background-color: lightblue;
+    background-color: var(--color-hover);
     /* outline: 3px solid yellow;  */
     /* font-weight: 700; */
 }

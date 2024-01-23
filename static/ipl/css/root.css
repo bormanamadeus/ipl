@@ -7,6 +7,7 @@
     --extra-back-color: var(--extra-back-color-def);
     --text-color-def: black;
     --text-color: var(--text-color-def);
+    --color-hover: lightblue;
 
     --main-size-def: 14px;
     --main-size: var(--main-size-def);
