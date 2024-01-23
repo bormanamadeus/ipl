@@ -9,7 +9,7 @@
     /* justify-content: space-around; */
     justify-content: center;
 
-    height: 100px;
+    /* height: 100px; */
     text-align: center;
     margin-bottom: 20px;
     z-index: 0;
@@ -28,43 +28,22 @@
     /* justify-content: space-around; */
     align-items: center;
     justify-content: center;
-    height: 80px;
+    height: auto;
     width: 300px;
     border: 1px solid gray;
     /* margin: 10px; */
     z-index: 0;
+
+    font-size: calc(var(--main-size) + 4px);
 }
 
-.mchs-ast text {
+.mchs-ast .text {
 }
 
 .mchs-ast b:hover, .mchs-rf b:hover {
     color: var(--main-color);
 }
 .mchs-ast p, .mchs-rf p {
-    font-size: calc(var(--text-color) - 8px);
     color: gray;
     z-index: 0;
 }
-
-
-/* #footer {
-    text-align: center;
-    font-size: calc(var(--main-size) + 4px);
-    color: var(--text-color);
-    margin-bottom: 20px;
-}
-
-#footer p {
-    line-height: 1.2;
-    font-weight: bold;
-}
-
-#footer-relative {
-    position: relative;
-}
-
-footer .glyphicon {
-    font-size: calc(var(--main-size) + 6px);
-	margin-bottom: 20px;
-} */
