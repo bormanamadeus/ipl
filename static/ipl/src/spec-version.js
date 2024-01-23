@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {  
     console.log("onload Job");
     const buttonDisappear = document.querySelector("#button-for-disappear-box");
+    // const buttonDisappear = document.querySelector("#button-disappear");
     const box = document.querySelector("#prev-box-spec");
 
     buttonDisappear.addEventListener("click", ()=>{
