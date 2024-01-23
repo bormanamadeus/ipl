@@ -1,12 +1,12 @@
 .sample {
     padding: 20px;
-    background: var(--main-color);
+    /* background: var(--main-color); */
   }
   .sample_letters {
     width: 1000px;
     margin: auto;
     padding: 20px;
-    background: var(--main-color);
+    /* background: var(--main-color); */
   }
   
   .sample_letters .act {
