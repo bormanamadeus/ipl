@@ -1,7 +1,7 @@
 .politic-h3 h3 {
     text-align: center;
     font-weight: 900;
-    font-size: calc(var(--text-size) + 16px);
+    font-size: calc(var(--main-size) + 16px);
     color: var(--text-color);
     padding: 20px;
 }
@@ -31,7 +31,12 @@
     margin: 10px;
 }
 
-  .corruption-text p a {
+.corruption-text p {
+    font-size: calc(var(--main-size) +  6px);
+}
+
+.corruption-text p a {
+    font-size: calc(var(--main-size) +  6px);
     text-decoration: none;
 }
   .corruption-text p a:link {
