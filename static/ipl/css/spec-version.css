@@ -67,18 +67,18 @@ span.text {
 }
 
 .button-disappear {
-  height: 3em;
-	line-height: 3em;
+  /* height: 3em; */
+	/* line-height: 3em; */
   text-align: center;
 }
 
 .visual-impaired-icon {
-  display: table-cell; vertical-align: middle; 
+  display: inline-block; vertical-align: middle; 
 }
 
 .button-disappear button {
   font-size: 30px;
-  display: table-cell; vertical-align: middle; 
+  display: inline-block; vertical-align: middle; 
 }
 
 .button-for-appear-box-center {

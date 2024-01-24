@@ -1,3 +1,4 @@
+//TODO - setting colors for visual impaired system
 window.addEventListener("load", () => {  
     console.log("onload Job");
     const buttonDisappear = document.querySelector("#button-for-disappear-box");
