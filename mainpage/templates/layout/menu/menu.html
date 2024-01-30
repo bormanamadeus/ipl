@@ -5,9 +5,36 @@
   .active {
     background-color:chocolate;
   }
+  body {
+      {% comment %} background-image: url("{% static 'ipl/img/city.jpg' %}");
+      background-size: cover;
+      background-repeat: no-repeat; {% endcomment %}
+  }
+
+  body:before {
+    z-index: -10;
+    content: ' ';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    {% comment %} width: 100%; {% endcomment %}
+    {% comment %} height: 100%; {% endcomment %}
+    opacity: 0.2;
+    background-image: url("{% static 'ipl/img/city.jpg' %}");
+    background-repeat: no-repeat;
+    {% comment %} background-position: 0 0; {% endcomment %}
+    background-size: cover;
+  }
 </style>
 
+
 <div style="height: 10px"></div>
+
+<div class="back-image">
+</div>
 
 {% comment %} TODO - insert image for Astrachan city {% endcomment %}
 <div class="mainmenu-title">
