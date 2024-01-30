@@ -3,9 +3,9 @@
 }
 
 /*  Templates */
-.box__color, .box__font, .box-deactive-images {
+.box__color, .box__font {
   position: relative;
-  width: 33%;
+  width: 50%;
   text-align: center;
   height: 80px;
   /* top: 40px; */
@@ -61,7 +61,7 @@ span.text {
   align-items: center;
   justify-content: center;
   height: 100px;
-  width: 600px;
+  width: 400px;
   margin: auto;
   border: 1px solid brown;
   background-color: #f8f8f8;
