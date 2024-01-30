@@ -10,12 +10,27 @@
 .mainmenu-flex-item {flex: 1;}
 .mainmenu-title-left {flex: 2;}
 .mainmenu-title-center {flex: 5;}
-.mainmenu-title-right {flex: 3;}
+.mainmenu-title-right {
+    flex: 2;
+    display: block;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
 
 .mainmenu-img {
     width: auto;
     height: 100%;
     object-fit: cover;
+}
+
+.mainmenu-city {
+    display: block;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mainmenu-title-img {
