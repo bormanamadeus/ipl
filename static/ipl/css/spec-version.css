@@ -67,6 +67,10 @@ span.text {
   background-color: #f8f8f8;
 }
 
+.box-deactive {
+  margin-right: 30px;
+}
+
 .button-disappear {
   /* height: 3em; */
 	/* line-height: 3em; */
