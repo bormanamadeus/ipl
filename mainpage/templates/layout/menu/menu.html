@@ -36,7 +36,6 @@
 <div class="back-image">
 </div>
 
-{% comment %} TODO - insert image for Astrachan city {% endcomment %}
 <div class="mainmenu-title">
   <div class="mainmenu-flex-item"></div>
   <img class="mainmenu-img mainmenu-title-left" src="{% static 'ipl/img/sign_mchs.webp' %}">
@@ -49,7 +48,12 @@
     <h1>(ФГБУ СЭУ ФПС ИПЛ по Астраханской области)</h1>
   </div>
 
-  <div class="mainmenu-title-right"></div>
+  {% comment %} <img class="mainmenu-city mainmenu-title-left" src="{% static 'ipl/img/sign_mchs.webp' %}"> {% endcomment %}
+  <div class="mainmenu-title-right">
+    <img class="mainmenu-city" src="{% static 'ipl/img/gerb.png' %}">
+  </div>
+  {% comment %} <div class="mainmenu-title-right"></div> {% endcomment %}
+  <div class="mainmenu-flex-item"></div>
 </div>
 
 <div class="mainmenu-before">
