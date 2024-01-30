@@ -29,6 +29,20 @@ window.addEventListener("load", () => {
         saveVarInLocalStorage("--main-size", r.style.getPropertyValue('--main-size-def'));
     })
 
+    const buttonDeactiveImages = document.querySelector("#box-deactivate-images--button");
+    buttonDeactiveImages.addEventListener("click", ()=>{
+        var images = document.getElementsByTagName("img");
+        for (var i = 0; i < images.length; i++)
+        images[i].style.visibility = false;
+    })
+
+    const buttonActiveImages = document.querySelector("#box-activate-images--button");__
+    buttonActiveImages.addEventListener("click", ()=>{
+        var images = document.getElementsByTagName("img");
+        for (var i = 0; i < images.length; i++)
+        images[i].style.visibility = true;
+    })
+
     console.log("save");
     var r = document.querySelector(':root');
     if (r.style.getPropertyValue('--main-size') != r.style.getPropertyValue('--main-size-def') || 
