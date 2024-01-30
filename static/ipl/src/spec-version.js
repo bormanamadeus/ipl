@@ -31,16 +31,26 @@ window.addEventListener("load", () => {
 
     const buttonDeactiveImages = document.querySelector("#box-deactivate-images--button");
     buttonDeactiveImages.addEventListener("click", ()=>{
-        var images = document.getElementsByTagName("img");
-        for (var i = 0; i < images.length; i++)
-        images[i].style.visibility = false;
+        console.log('start buttonDeactiveImages');
+        let images = document.querySelectorAll("img");
+        for (var i = 0; i < images.length; i++) {
+            // console.log('before: ', i, images[i], images[i].style.visibility);
+            images[i].style.visibility = "hidden";
+            // console.log('after: ', i, images[i], images[i].style.visibility);
+        }
+        saveVarInLocalStorage('deactive-image', true);
     })
 
-    const buttonActiveImages = document.querySelector("#box-activate-images--button");__
+    const buttonActiveImages = document.querySelector("#box-activate-images--button");
     buttonActiveImages.addEventListener("click", ()=>{
-        var images = document.getElementsByTagName("img");
-        for (var i = 0; i < images.length; i++)
-        images[i].style.visibility = true;
+        console.log('start buttonActiveImages');
+        let images = document.querySelectorAll("img");
+        for (var i = 0; i < images.length; i++) {
+            console.log('before: ', i, images[i], images[i].style.visibility);
+            images[i].style.visibility = "visible";
+            console.log('after: ', i, images[i], images[i].style.visibility);
+        }
+        localStorage.removeItem('deactive-image');
     })
 
     console.log("save");
@@ -121,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var mainColor = localStorage.getItem("--main-color");
     var textColor = localStorage.getItem("--text-color");
     var backColor = localStorage.getItem("--extra-back-color");
+    var deactive_image = localStorage.getItem("deactive-image");
     if (mainFontSize) {
         r.style.setProperty('--main-size', mainFontSize);
     }
@@ -132,5 +143,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (backColor) {
         r.style.setProperty('--extra-back-color', backColor);
+    }
+    console.log('deactive_image');
+    if (deactive_image) {
+        let images = document.querySelectorAll("img");
+        for (var i = 0; i < images.length; i++) {
+            images[i].style.visibility = "hidden";
+        }
+
     }
 });
