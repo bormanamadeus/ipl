@@ -8,6 +8,9 @@ from django.views.generic.base import TemplateView, View
 
 from .models import Services
 
+from colorama import init as init_colorama
+init_colorama()
+from colorama import Fore, Back, Style
 
 def get_main_page(request, **kwargs):
     context = create_context(request)
@@ -42,5 +45,7 @@ def create_context(request):
     services = Services.objects.all()
     path = request.path[1:-1]
     context = {'services': services, 'path': path}
-    print('Path: ', request.path)
+    print('> [mod: views.py]')
+    print('\t[func: create_context]')
+    print('\t\t[val: ', Fore.GREEN, 'Path', Style.RESET_ALL, ' -> ', Fore.BLUE,'"request.path"]', Style.RESET_ALL)
     return context
