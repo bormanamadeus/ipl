@@ -18,7 +18,7 @@
 <div class="flex-container services">
   {% for service in services %}
     <div>
-      <img src="{{ service.icon.url }}">
+      <img src="{% static '/ipl/img'%}{{service.icon.url}}">
       <!--<h3 style="text-align: center">{{ service.title }}</h3>-->
       <h4 style="text-align: center">{{ service.content }}</h4>
       <p style="text-align: center">{{ service.price }}</p>
